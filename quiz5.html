@@ -1,0 +1,1418 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>在线检测</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif; 
+                max-width: 800px; 
+                margin: 0 auto; 
+                padding: 20px;
+            }
+            .question {
+                margin-bottom: 20px; 
+                border-bottom: 1px solid #eee; 
+                padding-bottom: 15px;
+            }
+            .options {
+                margin-left: 20px;
+            }
+            .result {
+                margin-top: 30px; 
+                padding: 15px; 
+                background-color: #f8f9fa; 
+                border-radius: 5px;
+            }
+            button {
+                padding: 8px 15px; 
+                margin: 10px 5px; 
+                cursor: pointer;
+            }
+            .correct {
+                color: green;
+            }
+            .wrong {
+                color: red;
+            }
+            .wrong-question {
+                color: red; 
+                font-weight: bold;
+            }
+            .correct-answer {
+                color: green; 
+                font-weight: bold;
+            }
+            .answer-feedback {
+                margin-top: 5px;
+            }
+            .multi-notice {
+                color: #666; 
+                font-size: 0.9em; 
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hadoop大数据开发基础题库</h1>
+        <form id="quizForm">
+
+    <div class="question" id="question_1">
+        <p>1. 在HBase Shell操作中，以下命令用于删除整行的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q1" value="A" id="q1_A"><label for="q1_A">A. deleteall 'users', 'xiaoming'</label><br>
+<input type="radio" name="q1" value="B" id="q1_B"><label for="q1_B">B. deleteall 'xiaoming'</label><br>
+<input type="radio" name="q1" value="C" id="q1_C"><label for="q1_C">C. delete table from 'xiaoming'</label><br>
+<input type="radio" name="q1" value="D" id="q1_D"><label for="q1_D">D. delete from 'users', 'xiaoming'</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_2">
+        <p>2. Hadoop 3.x的HDFS的监控服务，默认是通过NameNode的( )端口访问的。</p>
+
+        <div class="options">
+            <input type="radio" name="q2" value="A" id="q2_A"><label for="q2_A">A. 8088</label><br>
+<input type="radio" name="q2" value="B" id="q2_B"><label for="q2_B">B. 9000</label><br>
+<input type="radio" name="q2" value="C" id="q2_C"><label for="q2_C">C. 9870</label><br>
+<input type="radio" name="q2" value="D" id="q2_D"><label for="q2_D">D. 8020</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_3">
+        <p>3. 配置Hadoop时，下列配置文件中包含JAVA_HOME变量的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q3" value="A" id="q3_A"><label for="q3_A">A. configuration.xs</label><br>
+<input type="radio" name="q3" value="B" id="q3_B"><label for="q3_B">B. hadoop-site.xml</label><br>
+<input type="radio" name="q3" value="C" id="q3_C"><label for="q3_C">C. hadoop-default.xml</label><br>
+<input type="radio" name="q3" value="D" id="q3_D"><label for="q3_D">D. hadoop-env.sh</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_4">
+        <p>4. 以下选项中，哪种类型间的转换是被HQL所支持的?( )</p>
+
+        <div class="options">
+            <input type="radio" name="q4" value="A" id="q4_A"><label for="q4_A">A. Double—Number</label><br>
+<input type="radio" name="q4" value="B" id="q4_B"><label for="q4_B">B. BigInt—Double</label><br>
+<input type="radio" name="q4" value="C" id="q4_C"><label for="q4_C">C. String—Double</label><br>
+<input type="radio" name="q4" value="D" id="q4_D"><label for="q4_D">D. Int—BigInt</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_5">
+        <p>5. 下列关于Hadoop的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q5" value="A" id="q5_A"><label for="q5_A">A. Hadoop集群能够部署在不同的机器上</label><br>
+<input type="radio" name="q5" value="B" id="q5_B"><label for="q5_B">B. Hadoop能够在所有节点并行地处理数据，具有高效性</label><br>
+<input type="radio" name="q5" value="C" id="q5_C"><label for="q5_C">C. Hadoop上的应用程序可以用C++语言编写</label><br>
+<input type="radio" name="q5" value="D" id="q5_D"><label for="q5_D">D. Hadoop集群搭建完成后，不能删减和增加节点</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_6">
+        <p>6. 上传一个大小为500MB的文件data.txt到Hadoop集群上，这个文件会占用HDFS数据块的个数是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q6" value="A" id="q6_A"><label for="q6_A">A. 3个</label><br>
+<input type="radio" name="q6" value="B" id="q6_B"><label for="q6_B">B. 1个</label><br>
+<input type="radio" name="q6" value="C" id="q6_C"><label for="q6_C">C. 5个</label><br>
+<input type="radio" name="q6" value="D" id="q6_D"><label for="q6_D">D. 4个</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_7">
+        <p>7. 在MapReduce程序中，Reducer模块中的自定义MaxReducer类继承( )父类。</p>
+
+        <div class="options">
+            <input type="radio" name="q7" value="A" id="q7_A"><label for="q7_A">A. Map</label><br>
+<input type="radio" name="q7" value="B" id="q7_B"><label for="q7_B">B. Reduce</label><br>
+<input type="radio" name="q7" value="C" id="q7_C"><label for="q7_C">C. Partitioner</label><br>
+<input type="radio" name="q7" value="D" id="q7_D"><label for="q7_D">D. Reducer</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_8">
+        <p>8. MapReduce程序最后输出的结果通常都是按键值对进行排序的，那么排序工作发生在( )阶段。</p>
+
+        <div class="options">
+            <input type="radio" name="q8" value="A" id="q8_A"><label for="q8_A">A. Shuffle</label><br>
+<input type="radio" name="q8" value="B" id="q8_B"><label for="q8_B">B. Combiner</label><br>
+<input type="radio" name="q8" value="C" id="q8_C"><label for="q8_C">C. Map</label><br>
+<input type="radio" name="q8" value="D" id="q8_D"><label for="q8_D">D. Reduce</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_9">
+        <p>9. Hive是建立在( )之上的一个数据仓库。</p>
+
+        <div class="options">
+            <input type="radio" name="q9" value="A" id="q9_A"><label for="q9_A">A. HBase</label><br>
+<input type="radio" name="q9" value="B" id="q9_B"><label for="q9_B">B. MapReduce</label><br>
+<input type="radio" name="q9" value="C" id="q9_C"><label for="q9_C">C. Hadoop</label><br>
+<input type="radio" name="q9" value="D" id="q9_D"><label for="q9_D">D. HDFS</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_10">
+        <p>10. HQL和SQL的一个不同之处在于( )操作。</p>
+
+        <div class="options">
+            <input type="radio" name="q10" value="A" id="q10_A"><label for="q10_A">A. Union</label><br>
+<input type="radio" name="q10" value="B" id="q10_B"><label for="q10_B">B. join</label><br>
+<input type="radio" name="q10" value="C" id="q10_C"><label for="q10_C">C. group by</label><br>
+<input type="radio" name="q10" value="D" id="q10_D"><label for="q10_D">D. partition</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_11">
+        <p>11. 现有一个节点，在节点中有解压的Hadoop安装包(未配置)，若搭建包含4个节点的Hadoop集群，则下列选项中步骤正确的是( )。   ① 克隆虚拟机  ② 配置SSH免密码登录  ③ 格式化NameNode  ④ 修改配置文件  ⑤ 配置时间同步服务</p>
+
+        <div class="options">
+            <input type="radio" name="q11" value="A" id="q11_A"><label for="q11_A">A. ⑤ ① ③ ② ④</label><br>
+<input type="radio" name="q11" value="B" id="q11_B"><label for="q11_B">B. ② ⑤ ④ ① ③</label><br>
+<input type="radio" name="q11" value="C" id="q11_C"><label for="q11_C">C. ④ ① ② ⑤ ③</label><br>
+<input type="radio" name="q11" value="D" id="q11_D"><label for="q11_D">D. ③ ② ① ⑤ ④</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_12">
+        <p>12. 下列关于HDFS的说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q12" value="A" id="q12_A"><label for="q12_A">A. NameNode负责HDFS中的数据存储</label><br>
+<input type="radio" name="q12" value="B" id="q12_B"><label for="q12_B">B. DataNode负责HDFS中的数据存储</label><br>
+<input type="radio" name="q12" value="C" id="q12_C"><label for="q12_C">C. Secondary NameNode通常与NameNode在一个节点启动</label><br>
+<input type="radio" name="q12" value="D" id="q12_D"><label for="q12_D">D. 元数据指的是文件实际的数据</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_13">
+        <p>13. 在保证HBase服务已经启动的情况下，进入HBase Shell界面，启动HBase的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q13" value="A" id="q13_A"><label for="q13_A">A. hbase shell</label><br>
+<input type="radio" name="q13" value="B" id="q13_B"><label for="q13_B">B. hbase.sh</label><br>
+<input type="radio" name="q13" value="C" id="q13_C"><label for="q13_C">C. start hbase-shell</label><br>
+<input type="radio" name="q13" value="D" id="q13_D"><label for="q13_D">D. start-hbase.sh</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_14">
+        <p>14. 在HDFS上创建了一个错误的目录/Tipdm/Spark，现需要删除这个目录，可以使用的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q14" value="A" id="q14_A"><label for="q14_A">A. hdfs dfs -rm /Tipdm/Spark</label><br>
+<input type="radio" name="q14" value="B" id="q14_B"><label for="q14_B">B. hdfs dfs -drop /Tipdm/Spark</label><br>
+<input type="radio" name="q14" value="C" id="q14_C"><label for="q14_C">C. hdfs dfs -rmdir /Tipdm/Spark</label><br>
+<input type="radio" name="q14" value="D" id="q14_D"><label for="q14_D">D. hdfs dfs -delete /Tipdm/Spark</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_15">
+        <p>15. 下列不属于Hadoop集群环境搭建模式的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q15" value="A" id="q15_A"><label for="q15_A">A. 完全分布式环境</label><br>
+<input type="radio" name="q15" value="B" id="q15_B"><label for="q15_B">B. 伪分布式环境</label><br>
+<input type="radio" name="q15" value="C" id="q15_C"><label for="q15_C">C. 嵌入式分布式环境</label><br>
+<input type="radio" name="q15" value="D" id="q15_D"><label for="q15_D">D. 单机环境</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_16">
+        <p>16. 查看testtable表中的所有数据的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q16" value="A" id="q16_A"><label for="q16_A">A. scan</label><br>
+<input type="radio" name="q16" value="B" id="q16_B"><label for="q16_B">B. desc</label><br>
+<input type="radio" name="q16" value="C" id="q16_C"><label for="q16_C">C. list</label><br>
+<input type="radio" name="q16" value="D" id="q16_D"><label for="q16_D">D. 以上都不对</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_17">
+        <p>17. 在Hadoop官方示例源码WordCount中，( )模块负责进行Hadoop集群的初始化设置，提交任务并等待程序运行完成。</p>
+
+        <div class="options">
+            <input type="radio" name="q17" value="A" id="q17_A"><label for="q17_A">A. Driver</label><br>
+<input type="radio" name="q17" value="B" id="q17_B"><label for="q17_B">B. Main</label><br>
+<input type="radio" name="q17" value="C" id="q17_C"><label for="q17_C">C. Reducer</label><br>
+<input type="radio" name="q17" value="D" id="q17_D"><label for="q17_D">D. Mapper</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_18">
+        <p>18. HBase依赖( )提供消息通信机制。</p>
+
+        <div class="options">
+            <input type="radio" name="q18" value="A" id="q18_A"><label for="q18_A">A. RPC</label><br>
+<input type="radio" name="q18" value="B" id="q18_B"><label for="q18_B">B. ZooKeeper</label><br>
+<input type="radio" name="q18" value="C" id="q18_C"><label for="q18_C">C. Socket</label><br>
+<input type="radio" name="q18" value="D" id="q18_D"><label for="q18_D">D. Chubby</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_19">
+        <p>19. 如果在Reduce阶段需要将结果都输出到同一个文件里，那么需要设置Reduce任务数，下列设置方法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q19" value="A" id="q19_A"><label for="q19_A">A. job.setNumreduceTasks() = 1;</label><br>
+<input type="radio" name="q19" value="B" id="q19_B"><label for="q19_B">B. job.setNumreduceTasks() = 0;</label><br>
+<input type="radio" name="q19" value="C" id="q19_C"><label for="q19_C">C. job.setNumReduceTasks(0);</label><br>
+<input type="radio" name="q19" value="D" id="q19_D"><label for="q19_D">D. job.setNumReduceTasks(1);</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_20">
+        <p>20. 下列可以下载HDFS上的/user/root/live.txt文件至Linux本地的/opt目录下的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q20" value="A" id="q20_A"><label for="q20_A">A. hdfs dfs -move /user/root/live.txt /opt/</label><br>
+<input type="radio" name="q20" value="B" id="q20_B"><label for="q20_B">B. hdfs dfs -put /user/root/live.txt /opt/</label><br>
+<input type="radio" name="q20" value="C" id="q20_C"><label for="q20_C">C. hdfs dfs -get /user/root/live.txt /opt/</label><br>
+<input type="radio" name="q20" value="D" id="q20_D"><label for="q20_D">D. hdfs dfs -download /user/root/live.txt /opt/</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_21">
+        <p>21. 在驱动类中，需要使用( )方法设置输出数据的格式。</p>
+
+        <div class="options">
+            <input type="radio" name="q21" value="A" id="q21_A"><label for="q21_A">A. setOutputKeyValueClass()</label><br>
+<input type="radio" name="q21" value="B" id="q21_B"><label for="q21_B">B. setJarByClass()</label><br>
+<input type="radio" name="q21" value="C" id="q21_C"><label for="q21_C">C. setOutputFormatClass()</label><br>
+<input type="radio" name="q21" value="D" id="q21_D"><label for="q21_D">D. setInputFormatClass()</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_22">
+        <p>22. 使用( )命令可以在HDFS上创建一个/Tipdm/Hadoop目录。</p>
+
+        <div class="options">
+            <input type="radio" name="q22" value="A" id="q22_A"><label for="q22_A">A. hdfs dfs -mkdir -p /Tipdm/Hadoop</label><br>
+<input type="radio" name="q22" value="B" id="q22_B"><label for="q22_B">B. hdfs dfs mkdir /Tipdm/Hadoop</label><br>
+<input type="radio" name="q22" value="C" id="q22_C"><label for="q22_C">C. hdfs dfs -mkdir /Tipdm/Hadoop</label><br>
+<input type="radio" name="q22" value="D" id="q22_D"><label for="q22_D">D. hdfs dfs mkdir -C /Tipdm/Hadoop</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_23">
+        <p>23. 下面与ZooKeeper类似的框架是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q23" value="A" id="q23_A"><label for="q23_A">A. Chubby</label><br>
+<input type="radio" name="q23" value="B" id="q23_B"><label for="q23_B">B. Java</label><br>
+<input type="radio" name="q23" value="C" id="q23_C"><label for="q23_C">C. Protobuf</label><br>
+<input type="radio" name="q23" value="D" id="q23_D"><label for="q23_D">D. Kafka</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_24">
+        <p>24. 在CentOS 7.8的Linux系统中，使用( )命令可以查看某个虚拟机的IP地址。</p>
+
+        <div class="options">
+            <input type="radio" name="q24" value="A" id="q24_A"><label for="q24_A">A. Ip</label><br>
+<input type="radio" name="q24" value="B" id="q24_B"><label for="q24_B">B. service network restart</label><br>
+<input type="radio" name="q24" value="C" id="q24_C"><label for="q24_C">C. service network start</label><br>
+<input type="radio" name="q24" value="D" id="q24_D"><label for="q24_D">D. ip addr</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_25">
+        <p>25. Hive默认分桶的数量是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q25" value="A" id="q25_A"><label for="q25_A">A. 2</label><br>
+<input type="radio" name="q25" value="B" id="q25_B"><label for="q25_B">B. 0</label><br>
+<input type="radio" name="q25" value="C" id="q25_C"><label for="q25_C">C. 1</label><br>
+<input type="radio" name="q25" value="D" id="q25_D"><label for="q25_D">D. -1</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_26">
+        <p>26. 创建Hive数据表时，指定字段之间的分隔符，需要使用( )语句。</p>
+
+        <div class="options">
+            <input type="radio" name="q26" value="A" id="q26_A"><label for="q26_A">A. collection items terminated by</label><br>
+<input type="radio" name="q26" value="B" id="q26_B"><label for="q26_B">B. fields terminated by</label><br>
+<input type="radio" name="q26" value="C" id="q26_C"><label for="q26_C">C. row format delimited</label><br>
+<input type="radio" name="q26" value="D" id="q26_D"><label for="q26_D">D. map keys terminated</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_27">
+        <p>27. HBase依赖( )提供强大的计算能力。</p>
+
+        <div class="options">
+            <input type="radio" name="q27" value="A" id="q27_A"><label for="q27_A">A. MapReduce</label><br>
+<input type="radio" name="q27" value="B" id="q27_B"><label for="q27_B">B. RPC</label><br>
+<input type="radio" name="q27" value="C" id="q27_C"><label for="q27_C">C. Chubby</label><br>
+<input type="radio" name="q27" value="D" id="q27_D"><label for="q27_D">D. ZooKeeper</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_28">
+        <p>28. Hive默认的构造配置是存储在Hive安装目录的conf目录下的( )文件。</p>
+
+        <div class="options">
+            <input type="radio" name="q28" value="A" id="q28_A"><label for="q28_A">A. hive-site.xml</label><br>
+<input type="radio" name="q28" value="B" id="q28_B"><label for="q28_B">B. hive-lib.xml</label><br>
+<input type="radio" name="q28" value="C" id="q28_C"><label for="q28_C">C. hive-default.xml</label><br>
+<input type="radio" name="q28" value="D" id="q28_D"><label for="q28_D">D. hive-core.xml</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_29">
+        <p>29. 关于MapReduce的输出格式，下列说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q29" value="A" id="q29_A"><label for="q29_A">A. DBOutputFormat:可以将数据写入MySQL数据库中</label><br>
+<input type="radio" name="q29" value="B" id="q29_B"><label for="q29_B">B. SequenceFileOutputFormat:输出文本文件，适合作为子MapReduce作业的输入</label><br>
+<input type="radio" name="q29" value="C" id="q29_C"><label for="q29_C">C. TextOutputFormat:以键值对的方式输出行</label><br>
+<input type="radio" name="q29" value="D" id="q29_D"><label for="q29_D">D. NullOutputFormat:忽略收到的数据，即没有输出</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_30">
+        <p>30. 在MapReduce的计算过程中，数据流的顺序是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q30" value="A" id="q30_A"><label for="q30_A">A. InputFormat→Mapper→Partitioner→Combiner→Reducer→OutputFormat</label><br>
+<input type="radio" name="q30" value="B" id="q30_B"><label for="q30_B">B. InputFormat→Mapper→Combiner→Partitioner→OutputFormat→Reducer</label><br>
+<input type="radio" name="q30" value="C" id="q30_C"><label for="q30_C">C. InputFormat→Mapper→Reducer→Combiner→Partitioner→OutputFormat</label><br>
+<input type="radio" name="q30" value="D" id="q30_D"><label for="q30_D">D. InputFormat→Mapper→Combiner→Partitioner→Reducer→OutputFormat</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_31">
+        <p>31. 下列( )情况不适合添加Combiner。</p>
+
+        <div class="options">
+            <input type="radio" name="q31" value="A" id="q31_A"><label for="q31_A">A. MapReduce程序求和</label><br>
+<input type="radio" name="q31" value="B" id="q31_B"><label for="q31_B">B. MapReduce程序求平均值</label><br>
+<input type="radio" name="q31" value="C" id="q31_C"><label for="q31_C">C. MapReduce程序求最大值</label><br>
+<input type="radio" name="q31" value="D" id="q31_D"><label for="q31_D">D. MapReduce程序实现单词计数</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_32">
+        <p>32. 下列关于YUM命令的options选项说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q32" value="A" id="q32_A"><label for="q32_A">A. -d:删除文件</label><br>
+<input type="radio" name="q32" value="B" id="q32_B"><label for="q32_B">B. -y:对所有的提问都回答"yes"</label><br>
+<input type="radio" name="q32" value="C" id="q32_C"><label for="q32_C">C. -h:显示帮助信息</label><br>
+<input type="radio" name="q32" value="D" id="q32_D"><label for="q32_D">D. -c:指定配置文件</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_33">
+        <p>33. 使用Hadoop官方的示例程序包hadoop-mapreduce-examples-3.1.4.jar中的wordcount模块，对HDFS上的/opt/data.txt文件进行单词计数，将结果保存至HDFS的/Tipdm/Hadoop目录下，下列命令正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q33" value="A" id="q33_A"><label for="q33_A">A. hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.4.jar wordcount /opt/data.txt /Tipdm/Hadoop/</label><br>
+<input type="radio" name="q33" value="B" id="q33_B"><label for="q33_B">B. hadoop dfs $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.4.jar wordcount /opt/data.txt /Tipdm/Hadoop/</label><br>
+<input type="radio" name="q33" value="C" id="q33_C"><label for="q33_C">C. hdfs -jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.4.jar wordcount /opt/data.txt /Tipdm/Hadoop/</label><br>
+<input type="radio" name="q33" value="D" id="q33_D"><label for="q33_D">D. hdfs dfs $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.4.jar wordcount /opt/data.txt /Tipdm/Hadoop/</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_34">
+        <p>34. 在Mapper类的setup()方法中，下列可以获取参数值的方法是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q34" value="A" id="q34_A"><label for="q34_A">A. Configuration.get("argName")</label><br>
+<input type="radio" name="q34" value="B" id="q34_B"><label for="q34_B">B. context.getConfiguration.getInt("argName")</label><br>
+<input type="radio" name="q34" value="C" id="q34_C"><label for="q34_C">C. Context.get("argName")</label><br>
+<input type="radio" name="q34" value="D" id="q34_D"><label for="q34_D">D. context.getConfiguration.get("argName")</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_35">
+        <p>35. 当在Job类中设置输出键值对格式时，如果Mapper模块的输出键值对格式与Reducer模块的输出键值对格式一致，那么下列说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q35" value="A" id="q35_A"><label for="q35_A">A. job.setMapOutputKeyClass()与job.setMapOutputValueClass()可以不进行设置</label><br>
+<input type="radio" name="q35" value="B" id="q35_B"><label for="q35_B">B. job.setReduceOutputKeyClass()与job.setReduceOutputValueClass()可以不进行设置</label><br>
+<input type="radio" name="q35" value="C" id="q35_C"><label for="q35_C">C. 以上都不能省略</label><br>
+<input type="radio" name="q35" value="D" id="q35_D"><label for="q35_D">D. job.setOutputKeyClass()与job.setOutputValueClass()可以不进行设置</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_36">
+        <p>36. yarn-site.xml文件的作用是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q36" value="A" id="q36_A"><label for="q36_A">A. 设置了Hadoop基本运行环境的配置</label><br>
+<input type="radio" name="q36" value="B" id="q36_B"><label for="q36_B">B. 设置了YARN框架的相关配置</label><br>
+<input type="radio" name="q36" value="C" id="q36_C"><label for="q36_C">C. 设置了YARN框架运行环境的配置</label><br>
+<input type="radio" name="q36" value="D" id="q36_D"><label for="q36_D">D. 设置了MapReduce框架的相关配置</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_37">
+        <p>37. 当提交某个MapReduce任务后，在任务列表中显示该任务的状态为"RUNNING"，这表示该任务当前的运行状态是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q37" value="A" id="q37_A"><label for="q37_A">A. 正在执行中</label><br>
+<input type="radio" name="q37" value="B" id="q37_B"><label for="q37_B">B. 正在接受中</label><br>
+<input type="radio" name="q37" value="C" id="q37_C"><label for="q37_C">C. 任务恢复中</label><br>
+<input type="radio" name="q37" value="D" id="q37_D"><label for="q37_D">D. 等待执行中</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_38">
+        <p>38. 以下不属于Hadoop配置文件的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q38" value="A" id="q38_A"><label for="q38_A">A. hadoop-site.xml</label><br>
+<input type="radio" name="q38" value="B" id="q38_B"><label for="q38_B">B. hdfs-site.xml</label><br>
+<input type="radio" name="q38" value="C" id="q38_C"><label for="q38_C">C. core-site.xml</label><br>
+<input type="radio" name="q38" value="D" id="q38_D"><label for="q38_D">D. mapred-site.xml</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_39">
+        <p>39. 在MapReduce程序中，Mapper类中的方法有( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q39" value="A" id="q39_A"><label for="q39_A">A. startup()、map()、end()</label><br>
+<input type="radio" name="q39" value="B" id="q39_B"><label for="q39_B">B. setup()、end()、map()</label><br>
+<input type="radio" name="q39" value="C" id="q39_C"><label for="q39_C">C. setup()、map()、cleanup()</label><br>
+<input type="radio" name="q39" value="D" id="q39_D"><label for="q39_D">D. startup()、run()、end()</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_40">
+        <p>40. 在CentOS 7.8的Linux系统中，ifcfg-ens33配置文件的BOOTPROTO的值设置为dhcp时表示( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q40" value="A" id="q40_A"><label for="q40_A">A. 设置网卡绑定时使用静态协议，此时IP地址需要自行设置</label><br>
+<input type="radio" name="q40" value="B" id="q40_B"><label for="q40_B">B. 设置网卡绑定时通过引导协议的方法获得IP地址</label><br>
+<input type="radio" name="q40" value="C" id="q40_C"><label for="q40_C">C. 设置网卡绑定时不使用任何协议</label><br>
+<input type="radio" name="q40" value="D" id="q40_D"><label for="q40_D">D. 设置网卡绑定时通过动态主机配置协议的方法获得IP地址</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_41">
+        <p>41. 当MapReduce处理数据时，下列执行流程正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q41" value="A" id="q41_A"><label for="q41_A">A. Map—Sort—Shuffle—Reduce</label><br>
+<input type="radio" name="q41" value="B" id="q41_B"><label for="q41_B">B. Map—Reduce—Shuffle—Sort</label><br>
+<input type="radio" name="q41" value="C" id="q41_C"><label for="q41_C">C. Shuffle—Map—Sort—Reduce</label><br>
+<input type="radio" name="q41" value="D" id="q41_D"><label for="q41_D">D. Map—Shuffle—Sort—Reduce</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_42">
+        <p>42. 下列不能将Linux本地的/opt/a.txt文件上传至HDFS的/user/root目录下的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q42" value="A" id="q42_A"><label for="q42_A">A. hdfs dfs -copyToLocal /opt/a.txt /user/root/</label><br>
+<input type="radio" name="q42" value="B" id="q42_B"><label for="q42_B">B. hdfs dfs -moveFromLocal /opt/a.txt /user/root/</label><br>
+<input type="radio" name="q42" value="C" id="q42_C"><label for="q42_C">C. hdfs dfs -copyFromLocal /opt/a.txt /user/root/</label><br>
+<input type="radio" name="q42" value="D" id="q42_D"><label for="q42_D">D. hdfs dfs -put /opt/a.txt /user/root/</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_43">
+        <p>43. 如果对HBase表添加数据，那么可以使用( )命令进行操作。</p>
+
+        <div class="options">
+            <input type="radio" name="q43" value="A" id="q43_A"><label for="q43_A">A. create</label><br>
+<input type="radio" name="q43" value="B" id="q43_B"><label for="q43_B">B. get</label><br>
+<input type="radio" name="q43" value="C" id="q43_C"><label for="q43_C">C. put</label><br>
+<input type="radio" name="q43" value="D" id="q43_D"><label for="q43_D">D. Scan</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_44">
+        <p>44. 在Hadoop Java API中，查看某个目录下的子目录，使用的方法是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q44" value="A" id="q44_A"><label for="q44_A">A. open()方法</label><br>
+<input type="radio" name="q44" value="B" id="q44_B"><label for="q44_B">B. mkdirs()方法</label><br>
+<input type="radio" name="q44" value="C" id="q44_C"><label for="q44_C">C. listStatus()方法</label><br>
+<input type="radio" name="q44" value="D" id="q44_D"><label for="q44_D">D. delete()方法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_45">
+        <p>45. 退出HBase Shell界面的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q45" value="A" id="q45_A"><label for="q45_A">A. forget</label><br>
+<input type="radio" name="q45" value="B" id="q45_B"><label for="q45_B">B. exit</label><br>
+<input type="radio" name="q45" value="C" id="q45_C"><label for="q45_C">C. exit()</label><br>
+<input type="radio" name="q45" value="D" id="q45_D"><label for="q45_D">D. quit</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_46">
+        <p>46. 关于自定义键值类型，下列说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q46" value="A" id="q46_A"><label for="q46_A">A. 自定义MapReduce的键类型需要继承Writable接口</label><br>
+<input type="radio" name="q46" value="B" id="q46_B"><label for="q46_B">B. 自定义键值类型必须实现readFields(DataInput datainput)方法</label><br>
+<input type="radio" name="q46" value="C" id="q46_C"><label for="q46_C">C. 自定义MapReduce的值类型需要继承WritableComparable接口</label><br>
+<input type="radio" name="q46" value="D" id="q46_D"><label for="q46_D">D. 自定义键值类型必须继承Writable接口</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_47">
+        <p>47. MapReduce默认的输入格式是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q47" value="A" id="q47_A"><label for="q47_A">A. KeyValueInputFormat</label><br>
+<input type="radio" name="q47" value="B" id="q47_B"><label for="q47_B">B. TextInputFormat</label><br>
+<input type="radio" name="q47" value="C" id="q47_C"><label for="q47_C">C. DBInputFormat</label><br>
+<input type="radio" name="q47" value="D" id="q47_D"><label for="q47_D">D. SequenceFileInputFormat</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_48">
+        <p>48. 使用MapReduce查询某个部门中薪资最高的员工姓名，如果输出结果的格式为"薪资 员工姓名"，例如"8000 Alice"(假设薪资均为整数)，那么输出键值对格式应该为( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q48" value="A" id="q48_A"><label for="q48_A">A. job.setOutputKeyClass(Text.class);job.setOutputValueClass(FloatWritable.class);</label><br>
+<input type="radio" name="q48" value="B" id="q48_B"><label for="q48_B">B. job.setOutputKeyClass(Text.class);job.setOutputValueClass(IntWritable.class);</label><br>
+<input type="radio" name="q48" value="C" id="q48_C"><label for="q48_C">C. job.setOutputKeyClass(IntWritable.class);job.setOutputValueClass(Text.class);</label><br>
+<input type="radio" name="q48" value="D" id="q48_D"><label for="q48_D">D. job.setOutputKeyClass(IntWritable.class);job.setOutputValueClass(LongWritable.class);</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_49">
+        <p>49. 启动Hadoop集群的顺序是( )。   ① start-dfs.sh  ② start-yarn.sh   ③ mr-jobhistory-daemon.sh start historyserver</p>
+
+        <div class="options">
+            <input type="radio" name="q49" value="A" id="q49_A"><label for="q49_A">A. ③ ② ①</label><br>
+<input type="radio" name="q49" value="B" id="q49_B"><label for="q49_B">B. ① ② ③</label><br>
+<input type="radio" name="q49" value="C" id="q49_C"><label for="q49_C">C. ③ ① ②</label><br>
+<input type="radio" name="q49" value="D" id="q49_D"><label for="q49_D">D. ② ① ③</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_50">
+        <p>50. 查看当前HBase中的表数据的命令是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q50" value="A" id="q50_A"><label for="q50_A">A. describe</label><br>
+<input type="radio" name="q50" value="B" id="q50_B"><label for="q50_B">B. show database</label><br>
+<input type="radio" name="q50" value="C" id="q50_C"><label for="q50_C">C. list</label><br>
+<input type="radio" name="q50" value="D" id="q50_D"><label for="q50_D">D. scan</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_51">
+        <p>51. 在Hadoop中，使用( )命令格式化NameNode。</p>
+
+        <div class="options">
+            <input type="radio" name="q51" value="A" id="q51_A"><label for="q51_A">A. hdfs namenode –format</label><br>
+<input type="radio" name="q51" value="B" id="q51_B"><label for="q51_B">B. start-mapred.sh</label><br>
+<input type="radio" name="q51" value="C" id="q51_C"><label for="q51_C">C. start-format.sh</label><br>
+<input type="radio" name="q51" value="D" id="q51_D"><label for="q51_D">D. hadoop job -history outdir</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_52">
+        <p>52. 下列关于Hadoop序列化说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q52" value="A" id="q52_A"><label for="q52_A">A. 具有扩展性，可透明地读取旧格式的数据</label><br>
+<input type="radio" name="q52" value="B" id="q52_B"><label for="q52_B">B. 具有独立性，只能使用Java读/写数据</label><br>
+<input type="radio" name="q52" value="C" id="q52_C"><label for="q52_C">C. 能够高效使用存储空间，具有紧凑性</label><br>
+<input type="radio" name="q52" value="D" id="q52_D"><label for="q52_D">D. 读取速度快，读取数据额外的开销小</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_53">
+        <p>53. 对于Hadoop官方示例源码WordCount，从结构上可以分为3个部分，下列不属于程序核心模块的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q53" value="A" id="q53_A"><label for="q53_A">A. Mapper模块</label><br>
+<input type="radio" name="q53" value="B" id="q53_B"><label for="q53_B">B. Main模块</label><br>
+<input type="radio" name="q53" value="C" id="q53_C"><label for="q53_C">C. Reducer模块</label><br>
+<input type="radio" name="q53" value="D" id="q53_D"><label for="q53_D">D. Driver模块</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_54">
+        <p>54. 关于Hadoop内置的数据类型，下列说法不正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q54" value="A" id="q54_A"><label for="q54_A">A. BooleanWritable:标准布尔型</label><br>
+<input type="radio" name="q54" value="B" id="q54_B"><label for="q54_B">B. ByteWritable:单字节型</label><br>
+<input type="radio" name="q54" value="C" id="q54_C"><label for="q54_C">C. IntWritable:长整型</label><br>
+<input type="radio" name="q54" value="D" id="q54_D"><label for="q54_D">D. Text:使用UTF-8格式存储的文本类型，在Java数据类型中主要针对String类型</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_55">
+        <p>55. 下列关于MapReduce的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q55" value="A" id="q55_A"><label for="q55_A">A. 在MapReduce中，无论Combiner被调用多少次，都不应改变Reducer的输出结果</label><br>
+<input type="radio" name="q55" value="B" id="q55_B"><label for="q55_B">B. Combiner发生在Reduce端</label><br>
+<input type="radio" name="q55" value="C" id="q55_C"><label for="q55_C">C. 在MapReduce中，对于Mapper输出的中间结果，Partitioner负责按键进行分区</label><br>
+<input type="radio" name="q55" value="D" id="q55_D"><label for="q55_D">D. 在MapReduce中，Combiner的作用为合并同一个分区中相同键的值，减小了后续的数据传输</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_56">
+        <p>56. 为了使Hive命令在任何目录下生效，需要在( )文件中配置Hive的全局变量。</p>
+
+        <div class="options">
+            <input type="radio" name="q56" value="A" id="q56_A"><label for="q56_A">A. /etc/hosts</label><br>
+<input type="radio" name="q56" value="B" id="q56_B"><label for="q56_B">B. /opt/apache-hive-3.1.2-bin/conf/hive-site.xml</label><br>
+<input type="radio" name="q56" value="C" id="q56_C"><label for="q56_C">C. /etc/profile</label><br>
+<input type="radio" name="q56" value="D" id="q56_D"><label for="q56_D">D. /opt/apache-hive-3.1.2-bin/conf/hive-env.sh</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_57">
+        <p>57. 下列更新HBase表中数据的语法，写法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q57" value="A" id="q57_A"><label for="q57_A">A. update user. 'xiaoming' set info.age=1</label><br>
+<input type="radio" name="q57" value="B" id="q57_B"><label for="q57_B">B. put 'users', 'xiaoming', 'info.age'</label><br>
+<input type="radio" name="q57" value="C" id="q57_C"><label for="q57_C">C. put 'users', 'xiaoming', 'info.age', '29'</label><br>
+<input type="radio" name="q57" value="D" id="q57_D"><label for="q57_D">D. update 'users', 'xiaoming', 'info.age', '29'</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_58">
+        <p>58. 仅查看集群在线节点的基本信息可以使用( )命令。</p>
+
+        <div class="options">
+            <input type="radio" name="q58" value="A" id="q58_A"><label for="q58_A">A. hdfs dfsadmin -report -live</label><br>
+<input type="radio" name="q58" value="B" id="q58_B"><label for="q58_B">B. hdfs dfsadmin -report</label><br>
+<input type="radio" name="q58" value="C" id="q58_C"><label for="q58_C">C. hdfs dfsadmin -report -dead</label><br>
+<input type="radio" name="q58" value="D" id="q58_D"><label for="q58_D">D. hdfs dfsadmin -report -decommissioning</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_59">
+        <p>59. 以下业务应用中，不属于Hive适用的场景的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q59" value="A" id="q59_A"><label for="q59_A">A. 数据汇总(每天或每周用户点击量的点击排行)</label><br>
+<input type="radio" name="q59" value="B" id="q59_B"><label for="q59_B">B. 数据挖掘(用户行为分析、兴趣分区、区域展示)</label><br>
+<input type="radio" name="q59" value="C" id="q59_C"><label for="q59_C">C. 实时的在线数据分析</label><br>
+<input type="radio" name="q59" value="D" id="q59_D"><label for="q59_D">D. 非实时分析</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_60">
+        <p>60. 关于YARN，下列说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q60" value="A" id="q60_A"><label for="q60_A">A. YARN是开源数据仓库系统，用于查询和分析存储在Hadoop中的大型数据集</label><br>
+<input type="radio" name="q60" value="B" id="q60_B"><label for="q60_B">B. YARN是Hadoop的资源管理器</label><br>
+<input type="radio" name="q60" value="C" id="q60_C"><label for="q60_C">C. 以上选项都不对</label><br>
+<input type="radio" name="q60" value="D" id="q60_D"><label for="q60_D">D. YARN是Hadoop的数据处理层</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_61">
+        <p>61. 按粒度大小的顺序，Hive数据模型被分为数据库、数据表、( )和桶。</p>
+
+        <div class="options">
+            <input type="radio" name="q61" value="A" id="q61_A"><label for="q61_A">A. 元组</label><br>
+<input type="radio" name="q61" value="B" id="q61_B"><label for="q61_B">B. 栏</label><br>
+<input type="radio" name="q61" value="C" id="q61_C"><label for="q61_C">C. 行</label><br>
+<input type="radio" name="q61" value="D" id="q61_D"><label for="q61_D">D. 分区</label><br>
+        </div>
+    </div>
+
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="button" onclick="submitQuiz()">提交答案</button>
+                <button type="button" onclick="resetQuiz()">重做</button>
+                <button type="button"><a href="quiz4.html" style="color: rgb(69, 14, 99);text-decoration: none;">上一页</a></button>
+                <button type="button"><a href="quiz6.html" style="color: rgb(38, 20, 108);text-decoration: none;">下一页</a></button>
+            </div>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+        <script>
+            // 正确答案映射
+            const correctAnswers = {
+                "1": "A","2": "C","3": "D","4": "C","5": "D","6": "D","7": "D","8": "A","9": "C","10": "D","11": "C","12": "B","13": "A","14": "C","15": "C","16": "A","17": "A","18": "B","19": "D","20": "C","21": "C","22": "A","23": "A","24": "D","25": "D","26": "B","27": "A","28": "A","29": "B","30": "D","31": "B","32": "A","33": "A","34": "D","35": "A","36": "B","37": "A","38": "A","39": "C","40": "D","41": "D","42": "A","43": "C","44": "C","45": "B","46": "D","47": "B","48": "C","49": "B","50": "D","51": "A","52": "B","53": "B","54": "C","55": "B","56": "C","57": "C","58": "A","59": "C","60": "B","61": "D"
+            };
+
+            function submitQuiz() {
+                let score = 0;
+                let wrongQuestions = [];
+
+                // 清除之前的反馈和标记
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                // 检查每道题
+
+        // 检查单选题 1
+        const selectedOption_1 = document.querySelector('input[name="q1"]:checked');
+        const correctAnswer_1 = correctAnswers["1"] || "";
+
+        if (selectedOption_1 && selectedOption_1.value === correctAnswer_1) {
+            score++;
+        } else {
+            wrongQuestions.push("1");
+        }
+
+        // 检查单选题 2
+        const selectedOption_2 = document.querySelector('input[name="q2"]:checked');
+        const correctAnswer_2 = correctAnswers["2"] || "";
+
+        if (selectedOption_2 && selectedOption_2.value === correctAnswer_2) {
+            score++;
+        } else {
+            wrongQuestions.push("2");
+        }
+
+        // 检查单选题 3
+        const selectedOption_3 = document.querySelector('input[name="q3"]:checked');
+        const correctAnswer_3 = correctAnswers["3"] || "";
+
+        if (selectedOption_3 && selectedOption_3.value === correctAnswer_3) {
+            score++;
+        } else {
+            wrongQuestions.push("3");
+        }
+
+        // 检查单选题 4
+        const selectedOption_4 = document.querySelector('input[name="q4"]:checked');
+        const correctAnswer_4 = correctAnswers["4"] || "";
+
+        if (selectedOption_4 && selectedOption_4.value === correctAnswer_4) {
+            score++;
+        } else {
+            wrongQuestions.push("4");
+        }
+
+        // 检查单选题 5
+        const selectedOption_5 = document.querySelector('input[name="q5"]:checked');
+        const correctAnswer_5 = correctAnswers["5"] || "";
+
+        if (selectedOption_5 && selectedOption_5.value === correctAnswer_5) {
+            score++;
+        } else {
+            wrongQuestions.push("5");
+        }
+
+        // 检查单选题 6
+        const selectedOption_6 = document.querySelector('input[name="q6"]:checked');
+        const correctAnswer_6 = correctAnswers["6"] || "";
+
+        if (selectedOption_6 && selectedOption_6.value === correctAnswer_6) {
+            score++;
+        } else {
+            wrongQuestions.push("6");
+        }
+
+        // 检查单选题 7
+        const selectedOption_7 = document.querySelector('input[name="q7"]:checked');
+        const correctAnswer_7 = correctAnswers["7"] || "";
+
+        if (selectedOption_7 && selectedOption_7.value === correctAnswer_7) {
+            score++;
+        } else {
+            wrongQuestions.push("7");
+        }
+
+        // 检查单选题 8
+        const selectedOption_8 = document.querySelector('input[name="q8"]:checked');
+        const correctAnswer_8 = correctAnswers["8"] || "";
+
+        if (selectedOption_8 && selectedOption_8.value === correctAnswer_8) {
+            score++;
+        } else {
+            wrongQuestions.push("8");
+        }
+
+        // 检查单选题 9
+        const selectedOption_9 = document.querySelector('input[name="q9"]:checked');
+        const correctAnswer_9 = correctAnswers["9"] || "";
+
+        if (selectedOption_9 && selectedOption_9.value === correctAnswer_9) {
+            score++;
+        } else {
+            wrongQuestions.push("9");
+        }
+
+        // 检查单选题 10
+        const selectedOption_10 = document.querySelector('input[name="q10"]:checked');
+        const correctAnswer_10 = correctAnswers["10"] || "";
+
+        if (selectedOption_10 && selectedOption_10.value === correctAnswer_10) {
+            score++;
+        } else {
+            wrongQuestions.push("10");
+        }
+
+        // 检查单选题 11
+        const selectedOption_11 = document.querySelector('input[name="q11"]:checked');
+        const correctAnswer_11 = correctAnswers["11"] || "";
+
+        if (selectedOption_11 && selectedOption_11.value === correctAnswer_11) {
+            score++;
+        } else {
+            wrongQuestions.push("11");
+        }
+
+        // 检查单选题 12
+        const selectedOption_12 = document.querySelector('input[name="q12"]:checked');
+        const correctAnswer_12 = correctAnswers["12"] || "";
+
+        if (selectedOption_12 && selectedOption_12.value === correctAnswer_12) {
+            score++;
+        } else {
+            wrongQuestions.push("12");
+        }
+
+        // 检查单选题 13
+        const selectedOption_13 = document.querySelector('input[name="q13"]:checked');
+        const correctAnswer_13 = correctAnswers["13"] || "";
+
+        if (selectedOption_13 && selectedOption_13.value === correctAnswer_13) {
+            score++;
+        } else {
+            wrongQuestions.push("13");
+        }
+
+        // 检查单选题 14
+        const selectedOption_14 = document.querySelector('input[name="q14"]:checked');
+        const correctAnswer_14 = correctAnswers["14"] || "";
+
+        if (selectedOption_14 && selectedOption_14.value === correctAnswer_14) {
+            score++;
+        } else {
+            wrongQuestions.push("14");
+        }
+
+        // 检查单选题 15
+        const selectedOption_15 = document.querySelector('input[name="q15"]:checked');
+        const correctAnswer_15 = correctAnswers["15"] || "";
+
+        if (selectedOption_15 && selectedOption_15.value === correctAnswer_15) {
+            score++;
+        } else {
+            wrongQuestions.push("15");
+        }
+
+        // 检查单选题 16
+        const selectedOption_16 = document.querySelector('input[name="q16"]:checked');
+        const correctAnswer_16 = correctAnswers["16"] || "";
+
+        if (selectedOption_16 && selectedOption_16.value === correctAnswer_16) {
+            score++;
+        } else {
+            wrongQuestions.push("16");
+        }
+
+        // 检查单选题 17
+        const selectedOption_17 = document.querySelector('input[name="q17"]:checked');
+        const correctAnswer_17 = correctAnswers["17"] || "";
+
+        if (selectedOption_17 && selectedOption_17.value === correctAnswer_17) {
+            score++;
+        } else {
+            wrongQuestions.push("17");
+        }
+
+        // 检查单选题 18
+        const selectedOption_18 = document.querySelector('input[name="q18"]:checked');
+        const correctAnswer_18 = correctAnswers["18"] || "";
+
+        if (selectedOption_18 && selectedOption_18.value === correctAnswer_18) {
+            score++;
+        } else {
+            wrongQuestions.push("18");
+        }
+
+        // 检查单选题 19
+        const selectedOption_19 = document.querySelector('input[name="q19"]:checked');
+        const correctAnswer_19 = correctAnswers["19"] || "";
+
+        if (selectedOption_19 && selectedOption_19.value === correctAnswer_19) {
+            score++;
+        } else {
+            wrongQuestions.push("19");
+        }
+
+        // 检查单选题 20
+        const selectedOption_20 = document.querySelector('input[name="q20"]:checked');
+        const correctAnswer_20 = correctAnswers["20"] || "";
+
+        if (selectedOption_20 && selectedOption_20.value === correctAnswer_20) {
+            score++;
+        } else {
+            wrongQuestions.push("20");
+        }
+
+        // 检查单选题 21
+        const selectedOption_21 = document.querySelector('input[name="q21"]:checked');
+        const correctAnswer_21 = correctAnswers["21"] || "";
+
+        if (selectedOption_21 && selectedOption_21.value === correctAnswer_21) {
+            score++;
+        } else {
+            wrongQuestions.push("21");
+        }
+
+        // 检查单选题 22
+        const selectedOption_22 = document.querySelector('input[name="q22"]:checked');
+        const correctAnswer_22 = correctAnswers["22"] || "";
+
+        if (selectedOption_22 && selectedOption_22.value === correctAnswer_22) {
+            score++;
+        } else {
+            wrongQuestions.push("22");
+        }
+
+        // 检查单选题 23
+        const selectedOption_23 = document.querySelector('input[name="q23"]:checked');
+        const correctAnswer_23 = correctAnswers["23"] || "";
+
+        if (selectedOption_23 && selectedOption_23.value === correctAnswer_23) {
+            score++;
+        } else {
+            wrongQuestions.push("23");
+        }
+
+        // 检查单选题 24
+        const selectedOption_24 = document.querySelector('input[name="q24"]:checked');
+        const correctAnswer_24 = correctAnswers["24"] || "";
+
+        if (selectedOption_24 && selectedOption_24.value === correctAnswer_24) {
+            score++;
+        } else {
+            wrongQuestions.push("24");
+        }
+
+        // 检查单选题 25
+        const selectedOption_25 = document.querySelector('input[name="q25"]:checked');
+        const correctAnswer_25 = correctAnswers["25"] || "";
+
+        if (selectedOption_25 && selectedOption_25.value === correctAnswer_25) {
+            score++;
+        } else {
+            wrongQuestions.push("25");
+        }
+
+        // 检查单选题 26
+        const selectedOption_26 = document.querySelector('input[name="q26"]:checked');
+        const correctAnswer_26 = correctAnswers["26"] || "";
+
+        if (selectedOption_26 && selectedOption_26.value === correctAnswer_26) {
+            score++;
+        } else {
+            wrongQuestions.push("26");
+        }
+
+        // 检查单选题 27
+        const selectedOption_27 = document.querySelector('input[name="q27"]:checked');
+        const correctAnswer_27 = correctAnswers["27"] || "";
+
+        if (selectedOption_27 && selectedOption_27.value === correctAnswer_27) {
+            score++;
+        } else {
+            wrongQuestions.push("27");
+        }
+
+        // 检查单选题 28
+        const selectedOption_28 = document.querySelector('input[name="q28"]:checked');
+        const correctAnswer_28 = correctAnswers["28"] || "";
+
+        if (selectedOption_28 && selectedOption_28.value === correctAnswer_28) {
+            score++;
+        } else {
+            wrongQuestions.push("28");
+        }
+
+        // 检查单选题 29
+        const selectedOption_29 = document.querySelector('input[name="q29"]:checked');
+        const correctAnswer_29 = correctAnswers["29"] || "";
+
+        if (selectedOption_29 && selectedOption_29.value === correctAnswer_29) {
+            score++;
+        } else {
+            wrongQuestions.push("29");
+        }
+
+        // 检查单选题 30
+        const selectedOption_30 = document.querySelector('input[name="q30"]:checked');
+        const correctAnswer_30 = correctAnswers["30"] || "";
+
+        if (selectedOption_30 && selectedOption_30.value === correctAnswer_30) {
+            score++;
+        } else {
+            wrongQuestions.push("30");
+        }
+
+        // 检查单选题 31
+        const selectedOption_31 = document.querySelector('input[name="q31"]:checked');
+        const correctAnswer_31 = correctAnswers["31"] || "";
+
+        if (selectedOption_31 && selectedOption_31.value === correctAnswer_31) {
+            score++;
+        } else {
+            wrongQuestions.push("31");
+        }
+
+        // 检查单选题 32
+        const selectedOption_32 = document.querySelector('input[name="q32"]:checked');
+        const correctAnswer_32 = correctAnswers["32"] || "";
+
+        if (selectedOption_32 && selectedOption_32.value === correctAnswer_32) {
+            score++;
+        } else {
+            wrongQuestions.push("32");
+        }
+
+        // 检查单选题 33
+        const selectedOption_33 = document.querySelector('input[name="q33"]:checked');
+        const correctAnswer_33 = correctAnswers["33"] || "";
+
+        if (selectedOption_33 && selectedOption_33.value === correctAnswer_33) {
+            score++;
+        } else {
+            wrongQuestions.push("33");
+        }
+
+        // 检查单选题 34
+        const selectedOption_34 = document.querySelector('input[name="q34"]:checked');
+        const correctAnswer_34 = correctAnswers["34"] || "";
+
+        if (selectedOption_34 && selectedOption_34.value === correctAnswer_34) {
+            score++;
+        } else {
+            wrongQuestions.push("34");
+        }
+
+        // 检查单选题 35
+        const selectedOption_35 = document.querySelector('input[name="q35"]:checked');
+        const correctAnswer_35 = correctAnswers["35"] || "";
+
+        if (selectedOption_35 && selectedOption_35.value === correctAnswer_35) {
+            score++;
+        } else {
+            wrongQuestions.push("35");
+        }
+
+        // 检查单选题 36
+        const selectedOption_36 = document.querySelector('input[name="q36"]:checked');
+        const correctAnswer_36 = correctAnswers["36"] || "";
+
+        if (selectedOption_36 && selectedOption_36.value === correctAnswer_36) {
+            score++;
+        } else {
+            wrongQuestions.push("36");
+        }
+
+        // 检查单选题 37
+        const selectedOption_37 = document.querySelector('input[name="q37"]:checked');
+        const correctAnswer_37 = correctAnswers["37"] || "";
+
+        if (selectedOption_37 && selectedOption_37.value === correctAnswer_37) {
+            score++;
+        } else {
+            wrongQuestions.push("37");
+        }
+
+        // 检查单选题 38
+        const selectedOption_38 = document.querySelector('input[name="q38"]:checked');
+        const correctAnswer_38 = correctAnswers["38"] || "";
+
+        if (selectedOption_38 && selectedOption_38.value === correctAnswer_38) {
+            score++;
+        } else {
+            wrongQuestions.push("38");
+        }
+
+        // 检查单选题 39
+        const selectedOption_39 = document.querySelector('input[name="q39"]:checked');
+        const correctAnswer_39 = correctAnswers["39"] || "";
+
+        if (selectedOption_39 && selectedOption_39.value === correctAnswer_39) {
+            score++;
+        } else {
+            wrongQuestions.push("39");
+        }
+
+        // 检查单选题 40
+        const selectedOption_40 = document.querySelector('input[name="q40"]:checked');
+        const correctAnswer_40 = correctAnswers["40"] || "";
+
+        if (selectedOption_40 && selectedOption_40.value === correctAnswer_40) {
+            score++;
+        } else {
+            wrongQuestions.push("40");
+        }
+
+        // 检查单选题 41
+        const selectedOption_41 = document.querySelector('input[name="q41"]:checked');
+        const correctAnswer_41 = correctAnswers["41"] || "";
+
+        if (selectedOption_41 && selectedOption_41.value === correctAnswer_41) {
+            score++;
+        } else {
+            wrongQuestions.push("41");
+        }
+
+        // 检查单选题 42
+        const selectedOption_42 = document.querySelector('input[name="q42"]:checked');
+        const correctAnswer_42 = correctAnswers["42"] || "";
+
+        if (selectedOption_42 && selectedOption_42.value === correctAnswer_42) {
+            score++;
+        } else {
+            wrongQuestions.push("42");
+        }
+
+        // 检查单选题 43
+        const selectedOption_43 = document.querySelector('input[name="q43"]:checked');
+        const correctAnswer_43 = correctAnswers["43"] || "";
+
+        if (selectedOption_43 && selectedOption_43.value === correctAnswer_43) {
+            score++;
+        } else {
+            wrongQuestions.push("43");
+        }
+
+        // 检查单选题 44
+        const selectedOption_44 = document.querySelector('input[name="q44"]:checked');
+        const correctAnswer_44 = correctAnswers["44"] || "";
+
+        if (selectedOption_44 && selectedOption_44.value === correctAnswer_44) {
+            score++;
+        } else {
+            wrongQuestions.push("44");
+        }
+
+        // 检查单选题 45
+        const selectedOption_45 = document.querySelector('input[name="q45"]:checked');
+        const correctAnswer_45 = correctAnswers["45"] || "";
+
+        if (selectedOption_45 && selectedOption_45.value === correctAnswer_45) {
+            score++;
+        } else {
+            wrongQuestions.push("45");
+        }
+
+        // 检查单选题 46
+        const selectedOption_46 = document.querySelector('input[name="q46"]:checked');
+        const correctAnswer_46 = correctAnswers["46"] || "";
+
+        if (selectedOption_46 && selectedOption_46.value === correctAnswer_46) {
+            score++;
+        } else {
+            wrongQuestions.push("46");
+        }
+
+        // 检查单选题 47
+        const selectedOption_47 = document.querySelector('input[name="q47"]:checked');
+        const correctAnswer_47 = correctAnswers["47"] || "";
+
+        if (selectedOption_47 && selectedOption_47.value === correctAnswer_47) {
+            score++;
+        } else {
+            wrongQuestions.push("47");
+        }
+
+        // 检查单选题 48
+        const selectedOption_48 = document.querySelector('input[name="q48"]:checked');
+        const correctAnswer_48 = correctAnswers["48"] || "";
+
+        if (selectedOption_48 && selectedOption_48.value === correctAnswer_48) {
+            score++;
+        } else {
+            wrongQuestions.push("48");
+        }
+
+        // 检查单选题 49
+        const selectedOption_49 = document.querySelector('input[name="q49"]:checked');
+        const correctAnswer_49 = correctAnswers["49"] || "";
+
+        if (selectedOption_49 && selectedOption_49.value === correctAnswer_49) {
+            score++;
+        } else {
+            wrongQuestions.push("49");
+        }
+
+        // 检查单选题 50
+        const selectedOption_50 = document.querySelector('input[name="q50"]:checked');
+        const correctAnswer_50 = correctAnswers["50"] || "";
+
+        if (selectedOption_50 && selectedOption_50.value === correctAnswer_50) {
+            score++;
+        } else {
+            wrongQuestions.push("50");
+        }
+
+        // 检查单选题 51
+        const selectedOption_51 = document.querySelector('input[name="q51"]:checked');
+        const correctAnswer_51 = correctAnswers["51"] || "";
+
+        if (selectedOption_51 && selectedOption_51.value === correctAnswer_51) {
+            score++;
+        } else {
+            wrongQuestions.push("51");
+        }
+
+        // 检查单选题 52
+        const selectedOption_52 = document.querySelector('input[name="q52"]:checked');
+        const correctAnswer_52 = correctAnswers["52"] || "";
+
+        if (selectedOption_52 && selectedOption_52.value === correctAnswer_52) {
+            score++;
+        } else {
+            wrongQuestions.push("52");
+        }
+
+        // 检查单选题 53
+        const selectedOption_53 = document.querySelector('input[name="q53"]:checked');
+        const correctAnswer_53 = correctAnswers["53"] || "";
+
+        if (selectedOption_53 && selectedOption_53.value === correctAnswer_53) {
+            score++;
+        } else {
+            wrongQuestions.push("53");
+        }
+
+        // 检查单选题 54
+        const selectedOption_54 = document.querySelector('input[name="q54"]:checked');
+        const correctAnswer_54 = correctAnswers["54"] || "";
+
+        if (selectedOption_54 && selectedOption_54.value === correctAnswer_54) {
+            score++;
+        } else {
+            wrongQuestions.push("54");
+        }
+
+        // 检查单选题 55
+        const selectedOption_55 = document.querySelector('input[name="q55"]:checked');
+        const correctAnswer_55 = correctAnswers["55"] || "";
+
+        if (selectedOption_55 && selectedOption_55.value === correctAnswer_55) {
+            score++;
+        } else {
+            wrongQuestions.push("55");
+        }
+
+        // 检查单选题 56
+        const selectedOption_56 = document.querySelector('input[name="q56"]:checked');
+        const correctAnswer_56 = correctAnswers["56"] || "";
+
+        if (selectedOption_56 && selectedOption_56.value === correctAnswer_56) {
+            score++;
+        } else {
+            wrongQuestions.push("56");
+        }
+
+        // 检查单选题 57
+        const selectedOption_57 = document.querySelector('input[name="q57"]:checked');
+        const correctAnswer_57 = correctAnswers["57"] || "";
+
+        if (selectedOption_57 && selectedOption_57.value === correctAnswer_57) {
+            score++;
+        } else {
+            wrongQuestions.push("57");
+        }
+
+        // 检查单选题 58
+        const selectedOption_58 = document.querySelector('input[name="q58"]:checked');
+        const correctAnswer_58 = correctAnswers["58"] || "";
+
+        if (selectedOption_58 && selectedOption_58.value === correctAnswer_58) {
+            score++;
+        } else {
+            wrongQuestions.push("58");
+        }
+
+        // 检查单选题 59
+        const selectedOption_59 = document.querySelector('input[name="q59"]:checked');
+        const correctAnswer_59 = correctAnswers["59"] || "";
+
+        if (selectedOption_59 && selectedOption_59.value === correctAnswer_59) {
+            score++;
+        } else {
+            wrongQuestions.push("59");
+        }
+
+        // 检查单选题 60
+        const selectedOption_60 = document.querySelector('input[name="q60"]:checked');
+        const correctAnswer_60 = correctAnswers["60"] || "";
+
+        if (selectedOption_60 && selectedOption_60.value === correctAnswer_60) {
+            score++;
+        } else {
+            wrongQuestions.push("60");
+        }
+
+        // 检查单选题 61
+        const selectedOption_61 = document.querySelector('input[name="q61"]:checked');
+        const correctAnswer_61 = correctAnswers["61"] || "";
+
+        if (selectedOption_61 && selectedOption_61.value === correctAnswer_61) {
+            score++;
+        } else {
+            wrongQuestions.push("61");
+        }
+
+
+                // 显示结果
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `<h3>测验结果</h3>
+                    <p>您的得分: <span class="${score === 61 ? 'correct' : 'wrong'}">${score}/${61}</span></p>`;
+
+                if(wrongQuestions.length > 0) {
+                    resultDiv.innerHTML += `<p>错题序号: ${wrongQuestions.join(', ')}</p>`;
+
+                    // 标记错题并显示正确答案
+                    wrongQuestions.forEach(qId => {
+                        const qElement = document.getElementById('question_' + qId);
+                        if (qElement) {
+                            qElement.classList.add('wrong-question');
+
+                            // 显示正确答案反馈
+                            const correctAns = correctAnswers[qId];
+                            if (correctAns) {
+                                const feedback = document.createElement('div');
+                                feedback.className = 'answer-feedback correct-answer';
+                                feedback.textContent = '正确答案: ' + correctAns.split('').join(', ');
+                                qElement.appendChild(feedback);
+                            }
+                        }
+                    });
+                }
+
+                resultDiv.style.display = 'block';
+                window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+            }
+
+            function resetQuiz() {
+                // 重置表单
+                document.getElementById('quizForm').reset();
+
+                // 隐藏结果
+                document.getElementById('result').style.display = 'none';
+
+                // 清除所有题目标记和反馈
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+
+                // 滚动到顶部
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,808 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>在线检测</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif; 
+                max-width: 800px; 
+                margin: 0 auto; 
+                padding: 20px;
+            }
+            .question {
+                margin-bottom: 20px; 
+                border-bottom: 1px solid #eee; 
+                padding-bottom: 15px;
+            }
+            .options {
+                margin-left: 20px;
+            }
+            .result {
+                margin-top: 30px; 
+                padding: 15px; 
+                background-color: #f8f9fa; 
+                border-radius: 5px;
+            }
+            button {
+                padding: 8px 15px; 
+                margin: 10px 5px; 
+                cursor: pointer;
+            }
+            .correct {
+                color: green;
+            }
+            .wrong {
+                color: red;
+            }
+            .wrong-question {
+                color: red; 
+                font-weight: bold;
+            }
+            .correct-answer {
+                color: green; 
+                font-weight: bold;
+            }
+            .answer-feedback {
+                margin-top: 5px;
+            }
+            .multi-notice {
+                color: #666; 
+                font-size: 0.9em; 
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>模拟卷C</h1>
+        <form id="quizForm">
+
+    <div class="question" id="question_1">
+        <p>1. (单选题) 在 Linux 系统下安装 ntp 服务的命令正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q1" value="A" id="q1_A"><label for="q1_A">A. yum install ntp</label><br>
+<input type="radio" name="q1" value="B" id="q1_B"><label for="q1_B">B. yum remove ntp</label><br>
+<input type="radio" name="q1" value="C" id="q1_C"><label for="q1_C">C. yum update ntp</label><br>
+<input type="radio" name="q1" value="D" id="q1_D"><label for="q1_D">D. yum list</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_2">
+        <p>2. (单选题) 下列不属于 HTTP/1.1 协议请求方法的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q2" value="A" id="q2_A"><label for="q2_A">A. GET</label><br>
+<input type="radio" name="q2" value="B" id="q2_B"><label for="q2_B">B. POST</label><br>
+<input type="radio" name="q2" value="C" id="q2_C"><label for="q2_C">C. DELETE</label><br>
+<input type="radio" name="q2" value="D" id="q2_D"><label for="q2_D">D. PUSH</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_3">
+        <p>3. (单选题) 正确搭建 Hadoop 集群的步骤是( )。① 克隆虚拟机② 配置 SSH 免密码登录③ 格式化④ 修改配置文件⑤ 配置时间同步服务</p>
+
+        <div class="options">
+            <input type="radio" name="q3" value="A" id="q3_A"><label for="q3_A">A. ④ ① ② ⑤ ③</label><br>
+<input type="radio" name="q3" value="B" id="q3_B"><label for="q3_B">B. ③ ② ① ⑤ ④</label><br>
+<input type="radio" name="q3" value="C" id="q3_C"><label for="q3_C">C. ⑤ ① ③ ② ④</label><br>
+<input type="radio" name="q3" value="D" id="q3_D"><label for="q3_D">D. ② ⑤ ④ ① ③</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_4">
+        <p>4. (单选题) 下列关于使用 pandas 库读写数据说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q4" value="A" id="q4_A"><label for="q4_A">A. read_csv 函数能够读取所有文本文档的数据</label><br>
+<input type="radio" name="q4" value="B" id="q4_B"><label for="q4_B">B. read_sql 函数能够读取数据库的数据</label><br>
+<input type="radio" name="q4" value="C" id="q4_C"><label for="q4_C">C. DataFrame.to_csv()方法能够将 DataFrame 对象写入 CSV 文件</label><br>
+<input type="radio" name="q4" value="D" id="q4_D"><label for="q4_D">D. DataFrame.to_excel()方法能够将 DataFrame 对象写入 Excel 文件</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_5">
+        <p>5. (单选题) 在 Matplotlib 库中，下列关于柱状图 bar 函数的参数说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q5" value="A" id="q5_A"><label for="q5_A">A. linewidth:表示柱状图中每根柱子边框宽度</label><br>
+<input type="radio" name="q5" value="B" id="q5_B"><label for="q5_B">B. align:表示柱状图中每根柱子的高度</label><br>
+<input type="radio" name="q5" value="C" id="q5_C"><label for="q5_C">C. width:表示柱状图中每根柱子的宽度</label><br>
+<input type="radio" name="q5" value="D" id="q5_D"><label for="q5_D">D. color:表示柱状图中每根柱子的颜色</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_6">
+        <p>6. (单选题) 在 pandas 库中，下列不属于 DataFrame.drop()方法的参数是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q6" value="A" id="q6_A"><label for="q6_A">A. labels</label><br>
+<input type="radio" name="q6" value="B" id="q6_B"><label for="q6_B">B. level</label><br>
+<input type="radio" name="q6" value="C" id="q6_C"><label for="q6_C">C. dtype</label><br>
+<input type="radio" name="q6" value="D" id="q6_D"><label for="q6_D">D. inplace</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_7">
+        <p>7. (单选题) 下列关于 pandas.concat()函数、DataFrame.append()方法、pandas.merge()函数和 DataFrame.join()方法的说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q7" value="A" id="q7_A"><label for="q7_A">A. pandas.concat()函数是常用的主键合并的函数，能够实现数据框之间的内连接和外连接</label><br>
+<input type="radio" name="q7" value="B" id="q7_B"><label for="q7_B">B. DataFrame.append()方法只能用于进行纵向堆叠，适用于所有数据框之间的纵向堆叠情况</label><br>
+<input type="radio" name="q7" value="C" id="q7_C"><label for="q7_C">C. pandas.merge()函数是常用的主键合并的函数，但不能够实现数据框之间的左连接和右连接</label><br>
+<input type="radio" name="q7" value="D" id="q7_D"><label for="q7_D">D. DataFrame.join()方法是常用的主键合并方法，但不能够实现数据框之间的左连接和右连接</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_8">
+        <p>8. (单选题) 下列可以实现导入页面等待相关库的代码是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q8" value="A" id="q8_A"><label for="q8_A">A. from selenium import webdriver</label><br>
+<input type="radio" name="q8" value="B" id="q8_B"><label for="q8_B">B. from selenium.webdriver.support.ui import WebDriverWait</label><br>
+<input type="radio" name="q8" value="C" id="q8_C"><label for="q8_C">C. from selenium.webdriver.common.by import By</label><br>
+<input type="radio" name="q8" value="D" id="q8_D"><label for="q8_D">D. from selenium.webdriver.support import expected_conditions</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_9">
+        <p>9. (单选题) 在 Matplotlib 库中，设置图形的 x 轴名称的函数是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q9" value="A" id="q9_A"><label for="q9_A">A. matplotlib.pyplot.ylim()函数</label><br>
+<input type="radio" name="q9" value="B" id="q9_B"><label for="q9_B">B. matplotlib.pyplot.xlim()函数</label><br>
+<input type="radio" name="q9" value="C" id="q9_C"><label for="q9_C">C. matplotlib.pyplot.xlabel()函数</label><br>
+<input type="radio" name="q9" value="D" id="q9_D"><label for="q9_D">D. matplotlib.pyplot.ylabel()函数</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_10">
+        <p>10. (单选题) 若要创建一个 3×3 的数组，则下列代码错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q10" value="A" id="q10_A"><label for="q10_A">A. numpy.arange(0, 9).reshape(3, 3)</label><br>
+<input type="radio" name="q10" value="B" id="q10_B"><label for="q10_B">B. numpy.eye(3)</label><br>
+<input type="radio" name="q10" value="C" id="q10_C"><label for="q10_C">C. numpy.random.random([3, 3, 3])</label><br>
+<input type="radio" name="q10" value="D" id="q10_D"><label for="q10_D">D. numpy.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_11">
+        <p>11. (单选题) 在 HTML 中，下列状态码表示请求成功的是（ ）。</p>
+
+        <div class="options">
+            <input type="radio" name="q11" value="A" id="q11_A"><label for="q11_A">A. 200</label><br>
+<input type="radio" name="q11" value="B" id="q11_B"><label for="q11_B">B. 400</label><br>
+<input type="radio" name="q11" value="C" id="q11_C"><label for="q11_C">C. 403</label><br>
+<input type="radio" name="q11" value="D" id="q11_D"><label for="q11_D">D. 500</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_12">
+        <p>12. (单选题) 在通过代码"from sklearn import tree"导入决策树模块，并通过代码"clf = tree.DecisionTreeClassifier()"构造分类器对象后，分类器对象 clf 在训练后做预测时需要调用的方法是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q12" value="A" id="q12_A"><label for="q12_A">A. clf.predict()</label><br>
+<input type="radio" name="q12" value="B" id="q12_B"><label for="q12_B">B. clf.outlook()</label><br>
+<input type="radio" name="q12" value="C" id="q12_C"><label for="q12_C">C. clf.forecast()</label><br>
+<input type="radio" name="q12" value="D" id="q12_D"><label for="q12_D">D. clf.guess()</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_13">
+        <p>13. (单选题) 下列关于 Jupyter Notebook 的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q13" value="A" id="q13_A"><label for="q13_A">A. Jupyter Notebook 支持 Markdown 语法</label><br>
+<input type="radio" name="q13" value="B" id="q13_B"><label for="q13_B">B. Jupyter Notebook 不可以安装 Python 库</label><br>
+<input type="radio" name="q13" value="C" id="q13_C"><label for="q13_C">C. Jupyter Notebook 可以导出 HTML 文件</label><br>
+<input type="radio" name="q13" value="D" id="q13_D"><label for="q13_D">D. Jupyter Notebook 支持代码补全功能</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_14">
+        <p>14. (单选题) 下列代码运行后输出结果正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q14" value="A" id="q14_A"><label for="q14_A">A. print('转化结果为:', np.bool(0))</label><br>
+<input type="radio" name="q14" value="B" id="q14_B"><label for="q14_B">B. print('转化结果为:', np.bool(1))</label><br>
+<input type="radio" name="q14" value="C" id="q14_C"><label for="q14_C">C. print('转化结果为:', np.bool(-1))</label><br>
+<input type="radio" name="q14" value="D" id="q14_D"><label for="q14_D">D. print('转化结果为:', np.bool(42))</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_15">
+        <p>15. (多选题) 下列属于 HDFS 保证可靠性的措施是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q15" value="A" id="q15_A"><label for="q15_A">A. 冗余备份</label><br>
+<input type="checkbox" name="q15" value="B" id="q15_B"><label for="q15_B">B. 副本存放</label><br>
+<input type="checkbox" name="q15" value="C" id="q15_C"><label for="q15_C">C. 宕机处理</label><br>
+<input type="checkbox" name="q15" value="D" id="q15_D"><label for="q15_D">D. 固定副本个数</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_16">
+        <p>16. (多选题) 下列属于 PyEcharts 库中图表类型的是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q16" value="A" id="q16_A"><label for="q16_A">A. 日历图</label><br>
+<input type="checkbox" name="q16" value="B" id="q16_B"><label for="q16_B">B. 漏斗图</label><br>
+<input type="checkbox" name="q16" value="C" id="q16_C"><label for="q16_C">C. 仪表盘</label><br>
+<input type="checkbox" name="q16" value="D" id="q16_D"><label for="q16_D">D. 关系图</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_17">
+        <p>17. (多选题) 下列可以实现数组分割的函数是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q17" value="A" id="q17_A"><label for="q17_A">A. numpy.hsplit(arr, 2)</label><br>
+<input type="checkbox" name="q17" value="B" id="q17_B"><label for="q17_B">B. numpy.vsplit(arr, 2)</label><br>
+<input type="checkbox" name="q17" value="C" id="q17_C"><label for="q17_C">C. numpy.split(arr, 2, axis=1)</label><br>
+<input type="checkbox" name="q17" value="D" id="q17_D"><label for="q17_D">D. numpy.reshape(arr, (2, 2))</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_18">
+        <p>18. (多选题) 聚焦爬虫的爬行策略包括( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q18" value="A" id="q18_A"><label for="q18_A">A. 基于内容评价的爬行策略</label><br>
+<input type="checkbox" name="q18" value="B" id="q18_B"><label for="q18_B">B. 基于链接结构评价的爬行策略</label><br>
+<input type="checkbox" name="q18" value="C" id="q18_C"><label for="q18_C">C. 基于增强学习的爬行策略</label><br>
+<input type="checkbox" name="q18" value="D" id="q18_D"><label for="q18_D">D. 基于语境图的爬行策略</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_19">
+        <p>19. (多选题) 在 Linux 系统中，下列属于网络配置文件的是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q19" value="A" id="q19_A"><label for="q19_A">A. /etc/udev/rules.d/70-persistent-net.rules</label><br>
+<input type="checkbox" name="q19" value="B" id="q19_B"><label for="q19_B">B. /etc/sysconfig/network-scriptd/ifcfg-eth0</label><br>
+<input type="checkbox" name="q19" value="C" id="q19_C"><label for="q19_C">C. /etc/sysconfig/network</label><br>
+<input type="checkbox" name="q19" value="D" id="q19_D"><label for="q19_D">D. /etc/resolv.conf</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_20">
+        <p>20. (多选题) 下列属于数据质量评价标准的是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q20" value="A" id="q20_A"><label for="q20_A">A. 数据的准确性</label><br>
+<input type="checkbox" name="q20" value="B" id="q20_B"><label for="q20_B">B. 数据的完整性</label><br>
+<input type="checkbox" name="q20" value="C" id="q20_C"><label for="q20_C">C. 数据的一致性</label><br>
+<input type="checkbox" name="q20" value="D" id="q20_D"><label for="q20_D">D. 数据的可解释性</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_21">
+        <p>21. (多选题) 下列可以实现数据聚合操作的方法是( )。</p>
+        <div class="multi-notice">(多选题，可选择多个答案)</div>
+        <div class="options">
+            <input type="checkbox" name="q21" value="A" id="q21_A"><label for="q21_A">A. DataFrame.agg()</label><br>
+<input type="checkbox" name="q21" value="B" id="q21_B"><label for="q21_B">B. DataFrame.apply()</label><br>
+<input type="checkbox" name="q21" value="C" id="q21_C"><label for="q21_C">C. DataFrame.groupby()</label><br>
+<input type="checkbox" name="q21" value="D" id="q21_D"><label for="q21_D">D. DataFrame.transform()</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_22">
+        <p>22. (判断题) 在 Linux 系统中，使用 yum remove 命令可以卸载软件包。</p>
+
+        <div class="options">
+            <input type="radio" name="q22" value="A" id="q22_A"><label for="q22_A">A. 对</label><br>
+<input type="radio" name="q22" value="B" id="q22_B"><label for="q22_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_23">
+        <p>23. (判断题) HTTP 协议是无状态的协议。</p>
+
+        <div class="options">
+            <input type="radio" name="q23" value="A" id="q23_A"><label for="q23_A">A. 对</label><br>
+<input type="radio" name="q23" value="B" id="q23_B"><label for="q23_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_24">
+        <p>24. (判断题) 在 Hadoop 集群中，SecondaryNameNode 是 NameNode 的热备份。</p>
+
+        <div class="options">
+            <input type="radio" name="q24" value="A" id="q24_A"><label for="q24_A">A. 对</label><br>
+<input type="radio" name="q24" value="B" id="q24_B"><label for="q24_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_25">
+        <p>25. (判断题) 在 pandas 库中，DataFrame.loc[]方法可以通过标签索引选取数据。</p>
+
+        <div class="options">
+            <input type="radio" name="q25" value="A" id="q25_A"><label for="q25_A">A. 对</label><br>
+<input type="radio" name="q25" value="B" id="q25_B"><label for="q25_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_26">
+        <p>26. (判断题) 在 Matplotlib 库中，plt.plot()函数只能绘制折线图。</p>
+
+        <div class="options">
+            <input type="radio" name="q26" value="A" id="q26_A"><label for="q26_A">A. 对</label><br>
+<input type="radio" name="q26" value="B" id="q26_B"><label for="q26_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_27">
+        <p>27. (判断题) 在 numpy 库中，numpy.where()函数只能用于条件筛选。</p>
+
+        <div class="options">
+            <input type="radio" name="q27" value="A" id="q27_A"><label for="q27_A">A. 对</label><br>
+<input type="radio" name="q27" value="B" id="q27_B"><label for="q27_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_28">
+        <p>28. (判断题) 在爬虫中，User-Agent 可以用于伪装浏览器身份。</p>
+
+        <div class="options">
+            <input type="radio" name="q28" value="A" id="q28_A"><label for="q28_A">A. 对</label><br>
+<input type="radio" name="q28" value="B" id="q28_B"><label for="q28_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_29">
+        <p>29. (判断题) 在 Linux 系统中，chmod 777 命令表示给所有用户赋予读、写、执行权限。</p>
+
+        <div class="options">
+            <input type="radio" name="q29" value="A" id="q29_A"><label for="q29_A">A. 对</label><br>
+<input type="radio" name="q29" value="B" id="q29_B"><label for="q29_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_30">
+        <p>30. (判断题) 在 pandas 库中，DataFrame.duplicated()方法可以删除重复数据。</p>
+
+        <div class="options">
+            <input type="radio" name="q30" value="A" id="q30_A"><label for="q30_A">A. 对</label><br>
+<input type="radio" name="q30" value="B" id="q30_B"><label for="q30_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_31">
+        <p>31. (判断题) 在 sklearn 库中，train_test_split()函数可以实现数据集划分。</p>
+
+        <div class="options">
+            <input type="radio" name="q31" value="A" id="q31_A"><label for="q31_A">A. 对</label><br>
+<input type="radio" name="q31" value="B" id="q31_B"><label for="q31_B">B. 错</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_32">
+        <p>32. (判断题) 在 Python 中，元组是不可变数据类型，列表是可变数据类型。</p>
+
+        <div class="options">
+            <input type="radio" name="q32" value="A" id="q32_A"><label for="q32_A">A. 对</label><br>
+<input type="radio" name="q32" value="B" id="q32_B"><label for="q32_B">B. 错</label><br>
+        </div>
+    </div>
+
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="button" onclick="submitQuiz()">提交答案</button>
+                <button type="button" onclick="resetQuiz()">重做</button>
+                <button type="button"><a href="quiz1.html" style="color: rgb(69, 14, 99);text-decoration: none;">上一页</a></button>
+                <button type="button"><a href="quiz3.html" style="color: rgb(38, 20, 108);text-decoration: none;">下一页</a></button>
+            </div>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+        <script>
+            // 正确答案映射
+            const correctAnswers = {
+                "1": "A","2": "D","3": "A","4": "A","5": "B","6": "C","7": "D","8": "B","9": "C","10": "C","11": "A","12": "A","13": "B","14": "D","15": "ABC","16": "ABCD","17": "ABC","18": "ABCD","19": "ABC","20": "ABCD","21": "ABD","22": "B","23": "A","24": "A","25": "A","26": "B","27": "B","28": "A","29": "A","30": "B","31": "B","32": "B"
+            };
+
+            function submitQuiz() {
+                let score = 0;
+                let wrongQuestions = [];
+
+                // 清除之前的反馈和标记
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                // 检查每道题
+
+        // 检查单选题 1
+        const selectedOption_1 = document.querySelector('input[name="q1"]:checked');
+        const correctAnswer_1 = correctAnswers["1"] || "";
+
+        if (selectedOption_1 && selectedOption_1.value === correctAnswer_1) {
+            score++;
+        } else {
+            wrongQuestions.push("1");
+        }
+
+        // 检查单选题 2
+        const selectedOption_2 = document.querySelector('input[name="q2"]:checked');
+        const correctAnswer_2 = correctAnswers["2"] || "";
+
+        if (selectedOption_2 && selectedOption_2.value === correctAnswer_2) {
+            score++;
+        } else {
+            wrongQuestions.push("2");
+        }
+
+        // 检查单选题 3
+        const selectedOption_3 = document.querySelector('input[name="q3"]:checked');
+        const correctAnswer_3 = correctAnswers["3"] || "";
+
+        if (selectedOption_3 && selectedOption_3.value === correctAnswer_3) {
+            score++;
+        } else {
+            wrongQuestions.push("3");
+        }
+
+        // 检查单选题 4
+        const selectedOption_4 = document.querySelector('input[name="q4"]:checked');
+        const correctAnswer_4 = correctAnswers["4"] || "";
+
+        if (selectedOption_4 && selectedOption_4.value === correctAnswer_4) {
+            score++;
+        } else {
+            wrongQuestions.push("4");
+        }
+
+        // 检查单选题 5
+        const selectedOption_5 = document.querySelector('input[name="q5"]:checked');
+        const correctAnswer_5 = correctAnswers["5"] || "";
+
+        if (selectedOption_5 && selectedOption_5.value === correctAnswer_5) {
+            score++;
+        } else {
+            wrongQuestions.push("5");
+        }
+
+        // 检查单选题 6
+        const selectedOption_6 = document.querySelector('input[name="q6"]:checked');
+        const correctAnswer_6 = correctAnswers["6"] || "";
+
+        if (selectedOption_6 && selectedOption_6.value === correctAnswer_6) {
+            score++;
+        } else {
+            wrongQuestions.push("6");
+        }
+
+        // 检查单选题 7
+        const selectedOption_7 = document.querySelector('input[name="q7"]:checked');
+        const correctAnswer_7 = correctAnswers["7"] || "";
+
+        if (selectedOption_7 && selectedOption_7.value === correctAnswer_7) {
+            score++;
+        } else {
+            wrongQuestions.push("7");
+        }
+
+        // 检查单选题 8
+        const selectedOption_8 = document.querySelector('input[name="q8"]:checked');
+        const correctAnswer_8 = correctAnswers["8"] || "";
+
+        if (selectedOption_8 && selectedOption_8.value === correctAnswer_8) {
+            score++;
+        } else {
+            wrongQuestions.push("8");
+        }
+
+        // 检查单选题 9
+        const selectedOption_9 = document.querySelector('input[name="q9"]:checked');
+        const correctAnswer_9 = correctAnswers["9"] || "";
+
+        if (selectedOption_9 && selectedOption_9.value === correctAnswer_9) {
+            score++;
+        } else {
+            wrongQuestions.push("9");
+        }
+
+        // 检查单选题 10
+        const selectedOption_10 = document.querySelector('input[name="q10"]:checked');
+        const correctAnswer_10 = correctAnswers["10"] || "";
+
+        if (selectedOption_10 && selectedOption_10.value === correctAnswer_10) {
+            score++;
+        } else {
+            wrongQuestions.push("10");
+        }
+
+        // 检查单选题 11
+        const selectedOption_11 = document.querySelector('input[name="q11"]:checked');
+        const correctAnswer_11 = correctAnswers["11"] || "";
+
+        if (selectedOption_11 && selectedOption_11.value === correctAnswer_11) {
+            score++;
+        } else {
+            wrongQuestions.push("11");
+        }
+
+        // 检查单选题 12
+        const selectedOption_12 = document.querySelector('input[name="q12"]:checked');
+        const correctAnswer_12 = correctAnswers["12"] || "";
+
+        if (selectedOption_12 && selectedOption_12.value === correctAnswer_12) {
+            score++;
+        } else {
+            wrongQuestions.push("12");
+        }
+
+        // 检查单选题 13
+        const selectedOption_13 = document.querySelector('input[name="q13"]:checked');
+        const correctAnswer_13 = correctAnswers["13"] || "";
+
+        if (selectedOption_13 && selectedOption_13.value === correctAnswer_13) {
+            score++;
+        } else {
+            wrongQuestions.push("13");
+        }
+
+        // 检查单选题 14
+        const selectedOption_14 = document.querySelector('input[name="q14"]:checked');
+        const correctAnswer_14 = correctAnswers["14"] || "";
+
+        if (selectedOption_14 && selectedOption_14.value === correctAnswer_14) {
+            score++;
+        } else {
+            wrongQuestions.push("14");
+        }
+
+        // 检查多选题 15
+        const selectedOptions_15 = Array.from(
+            document.querySelectorAll('input[name="q15"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_15 = (correctAnswers["15"] || "").split('').sort().join('');
+
+        if (selectedOptions_15 === correctAnswer_15) {
+            score++;
+        } else {
+            wrongQuestions.push("15");
+        }
+
+        // 检查多选题 16
+        const selectedOptions_16 = Array.from(
+            document.querySelectorAll('input[name="q16"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_16 = (correctAnswers["16"] || "").split('').sort().join('');
+
+        if (selectedOptions_16 === correctAnswer_16) {
+            score++;
+        } else {
+            wrongQuestions.push("16");
+        }
+
+        // 检查多选题 17
+        const selectedOptions_17 = Array.from(
+            document.querySelectorAll('input[name="q17"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_17 = (correctAnswers["17"] || "").split('').sort().join('');
+
+        if (selectedOptions_17 === correctAnswer_17) {
+            score++;
+        } else {
+            wrongQuestions.push("17");
+        }
+
+        // 检查多选题 18
+        const selectedOptions_18 = Array.from(
+            document.querySelectorAll('input[name="q18"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_18 = (correctAnswers["18"] || "").split('').sort().join('');
+
+        if (selectedOptions_18 === correctAnswer_18) {
+            score++;
+        } else {
+            wrongQuestions.push("18");
+        }
+
+        // 检查多选题 19
+        const selectedOptions_19 = Array.from(
+            document.querySelectorAll('input[name="q19"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_19 = (correctAnswers["19"] || "").split('').sort().join('');
+
+        if (selectedOptions_19 === correctAnswer_19) {
+            score++;
+        } else {
+            wrongQuestions.push("19");
+        }
+
+        // 检查多选题 20
+        const selectedOptions_20 = Array.from(
+            document.querySelectorAll('input[name="q20"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_20 = (correctAnswers["20"] || "").split('').sort().join('');
+
+        if (selectedOptions_20 === correctAnswer_20) {
+            score++;
+        } else {
+            wrongQuestions.push("20");
+        }
+
+        // 检查多选题 21
+        const selectedOptions_21 = Array.from(
+            document.querySelectorAll('input[name="q21"]:checked')
+        ).map(el => el.value).sort().join('');
+
+        const correctAnswer_21 = (correctAnswers["21"] || "").split('').sort().join('');
+
+        if (selectedOptions_21 === correctAnswer_21) {
+            score++;
+        } else {
+            wrongQuestions.push("21");
+        }
+
+        // 检查单选题 22
+        const selectedOption_22 = document.querySelector('input[name="q22"]:checked');
+        const correctAnswer_22 = correctAnswers["22"] || "";
+
+        if (selectedOption_22 && selectedOption_22.value === correctAnswer_22) {
+            score++;
+        } else {
+            wrongQuestions.push("22");
+        }
+
+        // 检查单选题 23
+        const selectedOption_23 = document.querySelector('input[name="q23"]:checked');
+        const correctAnswer_23 = correctAnswers["23"] || "";
+
+        if (selectedOption_23 && selectedOption_23.value === correctAnswer_23) {
+            score++;
+        } else {
+            wrongQuestions.push("23");
+        }
+
+        // 检查单选题 24
+        const selectedOption_24 = document.querySelector('input[name="q24"]:checked');
+        const correctAnswer_24 = correctAnswers["24"] || "";
+
+        if (selectedOption_24 && selectedOption_24.value === correctAnswer_24) {
+            score++;
+        } else {
+            wrongQuestions.push("24");
+        }
+
+        // 检查单选题 25
+        const selectedOption_25 = document.querySelector('input[name="q25"]:checked');
+        const correctAnswer_25 = correctAnswers["25"] || "";
+
+        if (selectedOption_25 && selectedOption_25.value === correctAnswer_25) {
+            score++;
+        } else {
+            wrongQuestions.push("25");
+        }
+
+        // 检查单选题 26
+        const selectedOption_26 = document.querySelector('input[name="q26"]:checked');
+        const correctAnswer_26 = correctAnswers["26"] || "";
+
+        if (selectedOption_26 && selectedOption_26.value === correctAnswer_26) {
+            score++;
+        } else {
+            wrongQuestions.push("26");
+        }
+
+        // 检查单选题 27
+        const selectedOption_27 = document.querySelector('input[name="q27"]:checked');
+        const correctAnswer_27 = correctAnswers["27"] || "";
+
+        if (selectedOption_27 && selectedOption_27.value === correctAnswer_27) {
+            score++;
+        } else {
+            wrongQuestions.push("27");
+        }
+
+        // 检查单选题 28
+        const selectedOption_28 = document.querySelector('input[name="q28"]:checked');
+        const correctAnswer_28 = correctAnswers["28"] || "";
+
+        if (selectedOption_28 && selectedOption_28.value === correctAnswer_28) {
+            score++;
+        } else {
+            wrongQuestions.push("28");
+        }
+
+        // 检查单选题 29
+        const selectedOption_29 = document.querySelector('input[name="q29"]:checked');
+        const correctAnswer_29 = correctAnswers["29"] || "";
+
+        if (selectedOption_29 && selectedOption_29.value === correctAnswer_29) {
+            score++;
+        } else {
+            wrongQuestions.push("29");
+        }
+
+        // 检查单选题 30
+        const selectedOption_30 = document.querySelector('input[name="q30"]:checked');
+        const correctAnswer_30 = correctAnswers["30"] || "";
+
+        if (selectedOption_30 && selectedOption_30.value === correctAnswer_30) {
+            score++;
+        } else {
+            wrongQuestions.push("30");
+        }
+
+        // 检查单选题 31
+        const selectedOption_31 = document.querySelector('input[name="q31"]:checked');
+        const correctAnswer_31 = correctAnswers["31"] || "";
+
+        if (selectedOption_31 && selectedOption_31.value === correctAnswer_31) {
+            score++;
+        } else {
+            wrongQuestions.push("31");
+        }
+
+        // 检查单选题 32
+        const selectedOption_32 = document.querySelector('input[name="q32"]:checked');
+        const correctAnswer_32 = correctAnswers["32"] || "";
+
+        if (selectedOption_32 && selectedOption_32.value === correctAnswer_32) {
+            score++;
+        } else {
+            wrongQuestions.push("32");
+        }
+
+
+                // 显示结果
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `<h3>测验结果</h3>
+                    <p>您的得分: <span class="${score === 32 ? 'correct' : 'wrong'}">${score}/${32}</span></p>`;
+
+                if(wrongQuestions.length > 0) {
+                    resultDiv.innerHTML += `<p>错题序号: ${wrongQuestions.join(', ')}</p>`;
+
+                    // 标记错题并显示正确答案
+                    wrongQuestions.forEach(qId => {
+                        const qElement = document.getElementById('question_' + qId);
+                        if (qElement) {
+                            qElement.classList.add('wrong-question');
+
+                            // 显示正确答案反馈
+                            const correctAns = correctAnswers[qId];
+                            if (correctAns) {
+                                const feedback = document.createElement('div');
+                                feedback.className = 'answer-feedback correct-answer';
+                                feedback.textContent = '正确答案: ' + correctAns.split('').join(', ');
+                                qElement.appendChild(feedback);
+                            }
+                        }
+                    });
+                }
+
+                resultDiv.style.display = 'block';
+                window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+            }
+
+            function resetQuiz() {
+                // 重置表单
+                document.getElementById('quizForm').reset();
+
+                // 隐藏结果
+                document.getElementById('result').style.display = 'none';
+
+                // 清除所有题目标记和反馈
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+
+                // 滚动到顶部
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+    </body>
+    </html>

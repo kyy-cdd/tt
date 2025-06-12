@@ -1,0 +1,1040 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>在线检测</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif; 
+                max-width: 800px; 
+                margin: 0 auto; 
+                padding: 20px;
+            }
+            .question {
+                margin-bottom: 20px; 
+                border-bottom: 1px solid #eee; 
+                padding-bottom: 15px;
+            }
+            .options {
+                margin-left: 20px;
+            }
+            .result {
+                margin-top: 30px; 
+                padding: 15px; 
+                background-color: #f8f9fa; 
+                border-radius: 5px;
+            }
+            button {
+                padding: 8px 15px; 
+                margin: 10px 5px; 
+                cursor: pointer;
+            }
+            .correct {
+                color: green;
+            }
+            .wrong {
+                color: red;
+            }
+            .wrong-question {
+                color: red; 
+                font-weight: bold;
+            }
+            .correct-answer {
+                color: green; 
+                font-weight: bold;
+            }
+            .answer-feedback {
+                margin-top: 5px;
+            }
+            .multi-notice {
+                color: #666; 
+                font-size: 0.9em; 
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>python数据分析与应用</h1>
+        <form id="quizForm">
+
+    <div class="question" id="question_1">
+        <p>1. 下面关于数据分析说法正确的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q1" value="A" id="q1_A"><label for="q1_A">A. 数据分析是数学、统计学理论结合科学的统计分析方法</label><br>
+<input type="radio" name="q1" value="B" id="q1_B"><label for="q1_B">B. 数据分析是统计学分析方法</label><br>
+<input type="radio" name="q1" value="C" id="q1_C"><label for="q1_C">C. 数据分析是一种数学分析方法</label><br>
+<input type="radio" name="q1" value="D" id="q1_D"><label for="q1_D">D. 数据分析是大数据分析方法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_2">
+        <p>2. 下列不属于 Python 优势的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q2" value="A" id="q2_A"><label for="q2_A">A. 程序的运行速度在所有计算机语言的程序中最快</label><br>
+<input type="radio" name="q2" value="B" id="q2_B"><label for="q2_B">B. 人门简单，功能强大</label><br>
+<input type="radio" name="q2" value="C" id="q2_C"><label for="q2_C">C. 语法简洁，程序开发速度快</label><br>
+<input type="radio" name="q2" value="D" id="q2_D"><label for="q2_D">D. 开源，可以自由阅读源代码并对其进行改动</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_3">
+        <p>3. 下列关于绘图的标准流程说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q3" value="A" id="q3_A"><label for="q3_A">A. 添加图例必须在绘制图形之后进行</label><br>
+<input type="radio" name="q3" value="B" id="q3_B"><label for="q3_B">B. 绘图之前必须先创建画布，不可省略</label><br>
+<input type="radio" name="q3" value="C" id="q3_C"><label for="q3_C">C. 绘图流程的最后部分是保存和显示图形</label><br>
+<input type="radio" name="q3" value="D" id="q3_D"><label for="q3_D">D. 添加标题、坐标轴标签，绘制图形等步骤有先后顺序</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_4">
+        <p>4. 下列关于数据分析的描述，说法错误的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q4" value="A" id="q4_A"><label for="q4_A">A. 数据分析时只能够使用数值型数据</label><br>
+<input type="radio" name="q4" value="B" id="q4_B"><label for="q4_B">B. 广义的数据分析包括狭义数据分析和数据挖掘</label><br>
+<input type="radio" name="q4" value="C" id="q4_C"><label for="q4_C">C. 模型优化步骤可以与分析和建模步骤同步进行</label><br>
+<input type="radio" name="q4" value="D" id="q4_D"><label for="q4_D">D. 数据分析过程中最核心的步骤是分析与建模</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_5">
+        <p>5. 下列有关 seaborn 库说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q5" value="A" id="q5_A"><label for="q5_A">A. seaborn 库是 Matplotlib 库的替代者</label><br>
+<input type="radio" name="q5" value="B" id="q5_B"><label for="q5_B">B. 使用 set_context 函数可以设置主题样式</label><br>
+<input type="radio" name="q5" value="C" id="q5_C"><label for="q5_C">C. 使用 despine 函数可以设置图形的边框</label><br>
+<input type="radio" name="q5" value="D" id="q5_D"><label for="q5_D">D. 在 seaborn 库的主题样式中 darkgrid 表示黑色背景</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_6">
+        <p>6. 下列关于 Python 数据分析常用库的描述错误的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q6" value="A" id="q6_A"><label for="q6_A">A. SciPy 主要用于解决科学计算中的各种标准问题</label><br>
+<input type="radio" name="q6" value="B" id="q6_B"><label for="q6_B">B. scikit-learn 是复杂有效的数据分析工具</label><br>
+<input type="radio" name="q6" value="C" id="q6_C"><label for="q6_C">C. pandas 能够实现对数据的整理工作</label><br>
+<input type="radio" name="q6" value="D" id="q6_D"><label for="q6_D">D. NumPy 不能使用线上安装方式进行安装</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_7">
+        <p>7. classification_report 函数用于输出分类模型评价报告，其内容不包括( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q7" value="A" id="q7_A"><label for="q7_A">A. true_positive_rate</label><br>
+<input type="radio" name="q7" value="B" id="q7_B"><label for="q7_B">B. f1-score</label><br>
+<input type="radio" name="q7" value="C" id="q7_C"><label for="q7_C">C. precision</label><br>
+<input type="radio" name="q7" value="D" id="q7_D"><label for="q7_D">D. recall</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_8">
+        <p>8. 下列关于pandas支持的数据结构的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q8" value="A" id="q8_A"><label for="q8_A">A. pandas支持Series和DataFrame</label><br>
+<input type="radio" name="q8" value="B" id="q8_B"><label for="q8_B">B. Series被定义为能够存储各种类型数据的一维数组</label><br>
+<input type="radio" name="q8" value="C" id="q8_C"><label for="q8_C">C. pandas只支持Series数据结构</label><br>
+<input type="radio" name="q8" value="D" id="q8_D"><label for="q8_D">D. DataFrame可与带有标记轴(行和列)的二维数组一起使用</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_9">
+        <p>9. 在下列选项中可以进行特征删除的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q9" value="A" id="q9_A"><label for="q9_A">A. dropna() 方法</label><br>
+<input type="radio" name="q9" value="B" id="q9_B"><label for="q9_B">B. fillna() 方法</label><br>
+<input type="radio" name="q9" value="C" id="q9_C"><label for="q9_C">C. isnull() 方法</label><br>
+<input type="radio" name="q9" value="D" id="q9_D"><label for="q9_D">D. notnull() 方法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_10">
+        <p>10. 下列关于 pandas 中 drop_duplicates() 方法的说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q10" value="A" id="q10_A"><label for="q10_A">A. drop_duplicates() 方法只对 DataFrame 有效</label><br>
+<input type="radio" name="q10" value="B" id="q10_B"><label for="q10_B">B. drop_duplicates() 是常用的主键合并方法，能够实现左连接和右连接</label><br>
+<input type="radio" name="q10" value="C" id="q10_C"><label for="q10_C">C. drop_duplicates() 方法不会改变原数据的排列</label><br>
+<input type="radio" name="q10" value="D" id="q10_D"><label for="q10_D">D. drop_duplicates() 方法仅支持单一特征数据去重</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_11">
+        <p>11. 下列关于分组聚合的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q11" value="A" id="q11_A"><label for="q11_A">A. 使用pandas的groupby()方法进行分组时，只能对列进行操作</label><br>
+<input type="radio" name="q11" value="B" id="q11_B"><label for="q11_B">B. pandas中能对任意类型数据进行分组只有groupby()方法</label><br>
+<input type="radio" name="q11" value="C" id="q11_C"><label for="q11_C">C. pandas分组聚合操作能够实现组内标准化</label><br>
+<input type="radio" name="q11" value="D" id="q11_D"><label for="q11_D">D. pandas聚合时能够使用agg()、apply()、transform()方法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_12">
+        <p>12. 下列关于 NumPy 的说法错误的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q12" value="A" id="q12_A"><label for="q12_A">A. NumPy 具备将 C++ 代码继承到 Pytbon 的功能</label><br>
+<input type="radio" name="q12" value="B" id="q12_B"><label for="q12_B">B. NumPy 可提供在算法之间传递数据的容器</label><br>
+<input type="radio" name="q12" value="C" id="q12_C"><label for="q12_C">C. NumPy 可快速高效处理多维数组</label><br>
+<input type="radio" name="q12" value="D" id="q12_D"><label for="q12_D">D. NumPy可实现线性代数运算、傅里叶变换和随机数生成</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_13">
+        <p>13. 下列对DataFrame的常用属性说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q13" value="A" id="q13_A"><label for="q13_A">A. dtypes可查看各列的数据类型</label><br>
+<input type="radio" name="q13" value="B" id="q13_B"><label for="q13_B">B. values可以获取元素</label><br>
+<input type="radio" name="q13" value="C" id="q13_C"><label for="q13_C">C. column可查看DataFrame的列名</label><br>
+<input type="radio" name="q13" value="D" id="q13_D"><label for="q13_D">D. index可查看索引情况</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_14">
+        <p>14. 在下列选项中不属于检测与处理缺失值的方法的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q14" value="A" id="q14_A"><label for="q14_A">A. 哑变量处理</label><br>
+<input type="radio" name="q14" value="B" id="q14_B"><label for="q14_B">B. 删除法</label><br>
+<input type="radio" name="q14" value="C" id="q14_C"><label for="q14_C">C. 插值法</label><br>
+<input type="radio" name="q14" value="D" id="q14_D"><label for="q14_D">D. 替换法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_15">
+        <p>15. 下列不属于数据分析的应用场景的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q15" value="A" id="q15_A"><label for="q15_A">A. 为用户提供个性化服务</label><br>
+<input type="radio" name="q15" value="B" id="q15_B"><label for="q15_B">B. 某人一生的命运预测</label><br>
+<input type="radio" name="q15" value="C" id="q15_C"><label for="q15_C">C. 一周天气预测</label><br>
+<input type="radio" name="q15" value="D" id="q15_D"><label for="q15_D">D. 合理预测航班座位需求数量</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_16">
+        <p>16. 下列关于 pandas 说法错误的是 (）</p>
+
+        <div class="options">
+            <input type="radio" name="q16" value="A" id="q16_A"><label for="q16_A">A. pandas 能够快捷处理结构化数据</label><br>
+<input type="radio" name="q16" value="B" id="q16_B"><label for="q16_B">B. pandas 是 Python 的数据分析核心库</label><br>
+<input type="radio" name="q16" value="C" id="q16_C"><label for="q16_C">C. pandas 没有NumPy 的高性能数字计算功能</label><br>
+<input type="radio" name="q16" value="D" id="q16_D"><label for="q16_D">D. pandas 提供复杂精细的索引功能</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_17">
+        <p>17. HLS 颜色空间中的 H 表示为( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q17" value="A" id="q17_A"><label for="q17_A">A. 色调</label><br>
+<input type="radio" name="q17" value="B" id="q17_B"><label for="q17_B">B. 饱和度</label><br>
+<input type="radio" name="q17" value="C" id="q17_C"><label for="q17_C">C. 空间大小</label><br>
+<input type="radio" name="q17" value="D" id="q17_D"><label for="q17_D">D. 亮度</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_18">
+        <p>18. 下列算法中属于分类方法的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q18" value="A" id="q18_A"><label for="q18_A">A. CLARANS 算法</label><br>
+<input type="radio" name="q18" value="B" id="q18_B"><label for="q18_B">B. SVC 算法</label><br>
+<input type="radio" name="q18" value="C" id="q18_C"><label for="q18_C">C. CLIQUE 算法</label><br>
+<input type="radio" name="q18" value="D" id="q18_D"><label for="q18_D">D. K-MEDOIDS 算法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_19">
+        <p>19. sklearn 中用于对特征列进行归一化的函数是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q19" value="A" id="q19_A"><label for="q19_A">A. StandardScaler</label><br>
+<input type="radio" name="q19" value="B" id="q19_B"><label for="q19_B">B. MinMaxScaler</label><br>
+<input type="radio" name="q19" value="C" id="q19_C"><label for="q19_C">C. Binarizer</label><br>
+<input type="radio" name="q19" value="D" id="q19_D"><label for="q19_D">D. Normalizer</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_20">
+        <p>20. sklearn 转换器的主要方法不包括( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q20" value="A" id="q20_A"><label for="q20_A">A. fit_transforms()</label><br>
+<input type="radio" name="q20" value="B" id="q20_B"><label for="q20_B">B. fit_transform()</label><br>
+<input type="radio" name="q20" value="C" id="q20_C"><label for="q20_C">C. transform()</label><br>
+<input type="radio" name="q20" value="D" id="q20_D"><label for="q20_D">D. fit()</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_21">
+        <p>21. 下列关于特征去重的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q21" value="A" id="q21_A"><label for="q21_A">A. corr() 方法可通过相似度矩阵去重</label><br>
+<input type="radio" name="q21" value="B" id="q21_B"><label for="q21_B">B. 相似度矩阵去重可对任意类型的重复特征去重</label><br>
+<input type="radio" name="q21" value="C" id="q21_C"><label for="q21_C">C. 相似度矩阵去重只能对数值型的重复特征去重</label><br>
+<input type="radio" name="q21" value="D" id="q21_D"><label for="q21_D">D. 可通过 equals() 方法进行特征去重</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_22">
+        <p>22. 下列选项中表示数组维度的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q22" value="A" id="q22_A"><label for="q22_A">A. ndim</label><br>
+<input type="radio" name="q22" value="B" id="q22_B"><label for="q22_B">B. dtype</label><br>
+<input type="radio" name="q22" value="C" id="q22_C"><label for="q22_C">C. size</label><br>
+<input type="radio" name="q22" value="D" id="q22_D"><label for="q22_D">D. shape</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_23">
+        <p>23. 在下列选项中可以进行哑变量处理的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q23" value="A" id="q23_A"><label for="q23_A">A. dummies 函数</label><br>
+<input type="radio" name="q23" value="B" id="q23_B"><label for="q23_B">B. get_dummies 函数</label><br>
+<input type="radio" name="q23" value="C" id="q23_C"><label for="q23_C">C. cut 函数</label><br>
+<input type="radio" name="q23" value="D" id="q23_D"><label for="q23_D">D. get_cut 函数</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_24">
+        <p>24. 下列关于apply()方法说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q24" value="A" id="q24_A"><label for="q24_A">A. apply()方法无法应用于分组操作</label><br>
+<input type="radio" name="q24" value="B" id="q24_B"><label for="q24_B">B. apply()方法只能对行、列进行操作</label><br>
+<input type="radio" name="q24" value="C" id="q24_C"><label for="q24_C">C. apply()方法作用范围:pandas中的Series和DataFrame</label><br>
+<input type="radio" name="q24" value="D" id="q24_D"><label for="q24_D">D. apply()方法中不能自定义函数</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_25">
+        <p>25. 下列说法不正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q25" value="A" id="q25_A"><label for="q25_A">A. 箱线图可以用于查看特征间的相关关系</label><br>
+<input type="radio" name="q25" value="B" id="q25_B"><label for="q25_B">B. 折线图可以用于查看数据的数量差异和变化趋势</label><br>
+<input type="radio" name="q25" value="C" id="q25_C"><label for="q25_C">C. 柱形图可以用于查看整体数据的数量分布</label><br>
+<input type="radio" name="q25" value="D" id="q25_D"><label for="q25_D">D. 散点图可以用于查看数据中的离群值</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_26">
+        <p>26. pyplot 使用 rc 配置文件来自定义图形的各种默认属性，用于修改线条上点的形状的 rc 参数名称是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q26" value="A" id="q26_A"><label for="q26_A">A. lines.markersize</label><br>
+<input type="radio" name="q26" value="B" id="q26_B"><label for="q26_B">B. lines.linewidth</label><br>
+<input type="radio" name="q26" value="C" id="q26_C"><label for="q26_C">C. lines.linestyle</label><br>
+<input type="radio" name="q26" value="D" id="q26_D"><label for="q26_D">D. lines.marker</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_27">
+        <p>27. 在下列选项中可以进行主键合并的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q27" value="A" id="q27_A"><label for="q27_A">A. concat</label><br>
+<input type="radio" name="q27" value="B" id="q27_B"><label for="q27_B">B. combine_first()</label><br>
+<input type="radio" name="q27" value="C" id="q27_C"><label for="q27_C">C. append()</label><br>
+<input type="radio" name="q27" value="D" id="q27_D"><label for="q27_D">D. merge</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_28">
+        <p>28. 下列图形常用于分析各分组数据在总数据中所占比例的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q28" value="A" id="q28_A"><label for="q28_A">A. 折线图</label><br>
+<input type="radio" name="q28" value="B" id="q28_B"><label for="q28_B">B. 饼图</label><br>
+<input type="radio" name="q28" value="C" id="q28_C"><label for="q28_C">C. 柱形图</label><br>
+<input type="radio" name="q28" value="D" id="q28_D"><label for="q28_D">D. 箱线图</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_29">
+        <p>29. 下列说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q29" value="A" id="q29_A"><label for="q29_A">A. 热力图可用于了解数据集中的变量的相关关系</label><br>
+<input type="radio" name="q29" value="B" id="q29_B"><label for="q29_B">B. stripplot 函数接收的数据只能是列表和数据框</label><br>
+<input type="radio" name="q29" value="C" id="q29_C"><label for="q29_C">C. 使用 stripplot 函数可以绘制线性回归拟合图</label><br>
+<input type="radio" name="q29" value="D" id="q29_D"><label for="q29_D">D. 基本散点图和 3D 散点图的绘制方法相同</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_30">
+        <p>30. 代码 "np.arange (0,1,0.2)" 的运行结果为 (）</p>
+
+        <div class="options">
+            <input type="radio" name="q30" value="A" id="q30_A"><label for="q30_A">A. [0.2,04,0.6,0,8,1.0]</label><br>
+<input type="radio" name="q30" value="B" id="q30_B"><label for="q30_B">B. [0., 0.2, 0.4,0.6,0.8]</label><br>
+<input type="radio" name="q30" value="C" id="q30_C"><label for="q30_C">C. [0.2,0.4,0.6,0.8]</label><br>
+<input type="radio" name="q30" value="D" id="q30_D"><label for="q30_D">D. [0.,0.2,0.4,0.6,0.8,1.0]</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_31">
+        <p>31. 在下列选项中可以进行缺失值替换的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q31" value="A" id="q31_A"><label for="q31_A">A. notnull() 方法</label><br>
+<input type="radio" name="q31" value="B" id="q31_B"><label for="q31_B">B. isnull() 方法</label><br>
+<input type="radio" name="q31" value="C" id="q31_C"><label for="q31_C">C. dropna() 方法</label><br>
+<input type="radio" name="q31" value="D" id="q31_D"><label for="q31_D">D. fillna() 方法</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_32">
+        <p>32. 下列用于横向组合数组的函数是 (）</p>
+
+        <div class="options">
+            <input type="radio" name="q32" value="A" id="q32_A"><label for="q32_A">A. vsplit</label><br>
+<input type="radio" name="q32" value="B" id="q32_B"><label for="q32_B">B. hstack</label><br>
+<input type="radio" name="q32" value="C" id="q32_C"><label for="q32_C">C. hsplit</label><br>
+<input type="radio" name="q32" value="D" id="q32_D"><label for="q32_D">D. vstack</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_33">
+        <p>33. 下列关于插值法的说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q33" value="A" id="q33_A"><label for="q33_A">A. pandas 中的 interpolate() 方法可进行插值操作</label><br>
+<input type="radio" name="q33" value="B" id="q33_B"><label for="q33_B">B. 线性插值通过求解线性方程得到缺失值</label><br>
+<input type="radio" name="q33" value="C" id="q33_C"><label for="q33_C">C. 常见的插值法有线性插值、多项式插值和样条插值</label><br>
+<input type="radio" name="q33" value="D" id="q33_D"><label for="q33_D">D. 常见的线性插值有拉格朗日插值和牛顿插值</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_34">
+        <p>34. 下列关于pandas数据读/写说法正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q34" value="A" id="q34_A"><label for="q34_A">A. to_csv()方法能够将结构化数据写入CSV文件</label><br>
+<input type="radio" name="q34" value="B" id="q34_B"><label for="q34_B">B. read_sql函数能够读取所有数据库的数据</label><br>
+<input type="radio" name="q34" value="C" id="q34_C"><label for="q34_C">C. to_csv()方法能够将结构化数据写入Excel文件</label><br>
+<input type="radio" name="q34" value="D" id="q34_D"><label for="q34_D">D. read_csv函数无法读取文本文档的数据</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_35">
+        <p>35. 在下列选项中可以进行横向堆叠的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q35" value="A" id="q35_A"><label for="q35_A">A. join()</label><br>
+<input type="radio" name="q35" value="B" id="q35_B"><label for="q35_B">B. combine_first()</label><br>
+<input type="radio" name="q35" value="C" id="q35_C"><label for="q35_C">C. concat</label><br>
+<input type="radio" name="q35" value="D" id="q35_D"><label for="q35_D">D. merge</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_36">
+        <p>36. 以下选项中关于 Anaconda 描述错误的是 ( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q36" value="A" id="q36_A"><label for="q36_A">A. Anaconda 支持并集成了 800 多个第三方库</label><br>
+<input type="radio" name="q36" value="B" id="q36_B"><label for="q36_B">B. Anaconda 是免费的，适合数据分析相关工作人员安装使用</label><br>
+<input type="radio" name="q36" value="C" id="q36_C"><label for="q36_C">C. Anaconda 不是一个集成开发环境</label><br>
+<input type="radio" name="q36" value="D" id="q36_D"><label for="q36_D">D. Anaconda 支持 Linux、Windows 系统</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_37">
+        <p>37. 使用pivot_table函数制作透视表时可用下列( )参数设置行分组键。</p>
+
+        <div class="options">
+            <input type="radio" name="q37" value="A" id="q37_A"><label for="q37_A">A. data</label><br>
+<input type="radio" name="q37" value="B" id="q37_B"><label for="q37_B">B. index</label><br>
+<input type="radio" name="q37" value="C" id="q37_C"><label for="q37_C">C. raw</label><br>
+<input type="radio" name="q37" value="D" id="q37_D"><label for="q37_D">D. values</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_38">
+        <p>38. 下列代码中能够为图形添加图例的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q38" value="A" id="q38_A"><label for="q38_A">A. plt.xticks([0,1,2,3,4])</label><br>
+<input type="radio" name="q38" value="B" id="q38_B"><label for="q38_B">B. plt.plot(x,y)</label><br>
+<input type="radio" name="q38" value="C" id="q38_C"><label for="q38_C">C. plt.legend ('y = cos x')</label><br>
+<input type="radio" name="q38" value="D" id="q38_D"><label for="q38_D">D. plt.title (' 散点图 ')</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_39">
+        <p>39. 在下列选项中可以进行重叠合并的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q39" value="A" id="q39_A"><label for="q39_A">A. merge</label><br>
+<input type="radio" name="q39" value="B" id="q39_B"><label for="q39_B">B. append()</label><br>
+<input type="radio" name="q39" value="C" id="q39_C"><label for="q39_C">C. combine_first()</label><br>
+<input type="radio" name="q39" value="D" id="q39_D"><label for="q39_D">D. concat</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_40">
+        <p>40. 下列不是系列配置项的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q40" value="A" id="q40_A"><label for="q40_A">A. 文本样式配置项</label><br>
+<input type="radio" name="q40" value="B" id="q40_B"><label for="q40_B">B. 标记点配置项</label><br>
+<input type="radio" name="q40" value="C" id="q40_C"><label for="q40_C">C. 标题配置项</label><br>
+<input type="radio" name="q40" value="D" id="q40_D"><label for="q40_D">D. 标签配置项</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_41">
+        <p>41. 下列对 Python 中的 NumPy 描述不正确的是 ()。</p>
+
+        <div class="options">
+            <input type="radio" name="q41" value="A" id="q41_A"><label for="q41_A">A. NumPy 是用于数据科学计算的基础模块</label><br>
+<input type="radio" name="q41" value="B" id="q41_B"><label for="q41_B">B. NumPy 能够对多维数组进行数值运算</label><br>
+<input type="radio" name="q41" value="C" id="q41_C"><label for="q41_C">C. NumPy 提供了 ndarray 和 array 两种基本的对象</label><br>
+<input type="radio" name="q41" value="D" id="q41_D"><label for="q41_D">D. NumPy 的数据容器能够保存任意类型的数据</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_42">
+        <p>42. 下列有关全局配置项说法错误的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q42" value="A" id="q42_A"><label for="q42_A">A. 全局配置项可以对标题、图例、坐标轴等的配置项进行配置</label><br>
+<input type="radio" name="q42" value="B" id="q42_B"><label for="q42_B">B. 使用 LegendOpts 类配置图例配置项</label><br>
+<input type="radio" name="q42" value="C" id="q42_C"><label for="q42_C">C. TitleOpts 类和 AxisOpts 类的参数设置完全相同</label><br>
+<input type="radio" name="q42" value="D" id="q42_D"><label for="q42_D">D. 使用 TitleOpts 类配置标题配置项</label><br>
+        </div>
+    </div>
+
+    <div class="question" id="question_43">
+        <p>43. 下列关于回归模型评价指标说法不正确的是( )。</p>
+
+        <div class="options">
+            <input type="radio" name="q43" value="A" id="q43_A"><label for="q43_A">A. R² 值越接近 1，模型性能越好</label><br>
+<input type="radio" name="q43" value="B" id="q43_B"><label for="q43_B">B. 平均绝对误差的值越接近 0，模型性能越好</label><br>
+<input type="radio" name="q43" value="C" id="q43_C"><label for="q43_C">C. 均方误差越接近 0，模型性能越差</label><br>
+<input type="radio" name="q43" value="D" id="q43_D"><label for="q43_D">D. 可解释方差越接近 0，模型性能越差</label><br>
+        </div>
+    </div>
+
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="button" onclick="submitQuiz()">提交答案</button>
+                <button type="button" onclick="resetQuiz()">重做</button>
+                <button type="button"><a href="quiz2.html" style="color: rgb(69, 14, 99);text-decoration: none;">上一页</a></button>
+                <button type="button"><a href="quiz4.html" style="color: rgb(38, 20, 108);text-decoration: none;">下一页</a></button>
+            </div>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+        <script>
+            // 正确答案映射
+            const correctAnswers = {
+                "1": "A","2": "A","3": "B","4": "A","5": "C","6": "D","7": "A","8": "C","9": "A","10": "C","11": "A","12": "A","13": "C","14": "A","15": "B","16": "C","17": "A","18": "B","19": "B","20": "A","21": "B","22": "A","23": "B","24": "C","25": "A","26": "D","27": "D","28": "B","29": "A","30": "B","31": "D","32": "B","33": "D","34": "A","35": "C","36": "C","37": "B","38": "C","39": "C","40": "C","41": "C","42": "C","43": "C"
+            };
+
+            function submitQuiz() {
+                let score = 0;
+                let wrongQuestions = [];
+
+                // 清除之前的反馈和标记
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                // 检查每道题
+
+        // 检查单选题 1
+        const selectedOption_1 = document.querySelector('input[name="q1"]:checked');
+        const correctAnswer_1 = correctAnswers["1"] || "";
+
+        if (selectedOption_1 && selectedOption_1.value === correctAnswer_1) {
+            score++;
+        } else {
+            wrongQuestions.push("1");
+        }
+
+        // 检查单选题 2
+        const selectedOption_2 = document.querySelector('input[name="q2"]:checked');
+        const correctAnswer_2 = correctAnswers["2"] || "";
+
+        if (selectedOption_2 && selectedOption_2.value === correctAnswer_2) {
+            score++;
+        } else {
+            wrongQuestions.push("2");
+        }
+
+        // 检查单选题 3
+        const selectedOption_3 = document.querySelector('input[name="q3"]:checked');
+        const correctAnswer_3 = correctAnswers["3"] || "";
+
+        if (selectedOption_3 && selectedOption_3.value === correctAnswer_3) {
+            score++;
+        } else {
+            wrongQuestions.push("3");
+        }
+
+        // 检查单选题 4
+        const selectedOption_4 = document.querySelector('input[name="q4"]:checked');
+        const correctAnswer_4 = correctAnswers["4"] || "";
+
+        if (selectedOption_4 && selectedOption_4.value === correctAnswer_4) {
+            score++;
+        } else {
+            wrongQuestions.push("4");
+        }
+
+        // 检查单选题 5
+        const selectedOption_5 = document.querySelector('input[name="q5"]:checked');
+        const correctAnswer_5 = correctAnswers["5"] || "";
+
+        if (selectedOption_5 && selectedOption_5.value === correctAnswer_5) {
+            score++;
+        } else {
+            wrongQuestions.push("5");
+        }
+
+        // 检查单选题 6
+        const selectedOption_6 = document.querySelector('input[name="q6"]:checked');
+        const correctAnswer_6 = correctAnswers["6"] || "";
+
+        if (selectedOption_6 && selectedOption_6.value === correctAnswer_6) {
+            score++;
+        } else {
+            wrongQuestions.push("6");
+        }
+
+        // 检查单选题 7
+        const selectedOption_7 = document.querySelector('input[name="q7"]:checked');
+        const correctAnswer_7 = correctAnswers["7"] || "";
+
+        if (selectedOption_7 && selectedOption_7.value === correctAnswer_7) {
+            score++;
+        } else {
+            wrongQuestions.push("7");
+        }
+
+        // 检查单选题 8
+        const selectedOption_8 = document.querySelector('input[name="q8"]:checked');
+        const correctAnswer_8 = correctAnswers["8"] || "";
+
+        if (selectedOption_8 && selectedOption_8.value === correctAnswer_8) {
+            score++;
+        } else {
+            wrongQuestions.push("8");
+        }
+
+        // 检查单选题 9
+        const selectedOption_9 = document.querySelector('input[name="q9"]:checked');
+        const correctAnswer_9 = correctAnswers["9"] || "";
+
+        if (selectedOption_9 && selectedOption_9.value === correctAnswer_9) {
+            score++;
+        } else {
+            wrongQuestions.push("9");
+        }
+
+        // 检查单选题 10
+        const selectedOption_10 = document.querySelector('input[name="q10"]:checked');
+        const correctAnswer_10 = correctAnswers["10"] || "";
+
+        if (selectedOption_10 && selectedOption_10.value === correctAnswer_10) {
+            score++;
+        } else {
+            wrongQuestions.push("10");
+        }
+
+        // 检查单选题 11
+        const selectedOption_11 = document.querySelector('input[name="q11"]:checked');
+        const correctAnswer_11 = correctAnswers["11"] || "";
+
+        if (selectedOption_11 && selectedOption_11.value === correctAnswer_11) {
+            score++;
+        } else {
+            wrongQuestions.push("11");
+        }
+
+        // 检查单选题 12
+        const selectedOption_12 = document.querySelector('input[name="q12"]:checked');
+        const correctAnswer_12 = correctAnswers["12"] || "";
+
+        if (selectedOption_12 && selectedOption_12.value === correctAnswer_12) {
+            score++;
+        } else {
+            wrongQuestions.push("12");
+        }
+
+        // 检查单选题 13
+        const selectedOption_13 = document.querySelector('input[name="q13"]:checked');
+        const correctAnswer_13 = correctAnswers["13"] || "";
+
+        if (selectedOption_13 && selectedOption_13.value === correctAnswer_13) {
+            score++;
+        } else {
+            wrongQuestions.push("13");
+        }
+
+        // 检查单选题 14
+        const selectedOption_14 = document.querySelector('input[name="q14"]:checked');
+        const correctAnswer_14 = correctAnswers["14"] || "";
+
+        if (selectedOption_14 && selectedOption_14.value === correctAnswer_14) {
+            score++;
+        } else {
+            wrongQuestions.push("14");
+        }
+
+        // 检查单选题 15
+        const selectedOption_15 = document.querySelector('input[name="q15"]:checked');
+        const correctAnswer_15 = correctAnswers["15"] || "";
+
+        if (selectedOption_15 && selectedOption_15.value === correctAnswer_15) {
+            score++;
+        } else {
+            wrongQuestions.push("15");
+        }
+
+        // 检查单选题 16
+        const selectedOption_16 = document.querySelector('input[name="q16"]:checked');
+        const correctAnswer_16 = correctAnswers["16"] || "";
+
+        if (selectedOption_16 && selectedOption_16.value === correctAnswer_16) {
+            score++;
+        } else {
+            wrongQuestions.push("16");
+        }
+
+        // 检查单选题 17
+        const selectedOption_17 = document.querySelector('input[name="q17"]:checked');
+        const correctAnswer_17 = correctAnswers["17"] || "";
+
+        if (selectedOption_17 && selectedOption_17.value === correctAnswer_17) {
+            score++;
+        } else {
+            wrongQuestions.push("17");
+        }
+
+        // 检查单选题 18
+        const selectedOption_18 = document.querySelector('input[name="q18"]:checked');
+        const correctAnswer_18 = correctAnswers["18"] || "";
+
+        if (selectedOption_18 && selectedOption_18.value === correctAnswer_18) {
+            score++;
+        } else {
+            wrongQuestions.push("18");
+        }
+
+        // 检查单选题 19
+        const selectedOption_19 = document.querySelector('input[name="q19"]:checked');
+        const correctAnswer_19 = correctAnswers["19"] || "";
+
+        if (selectedOption_19 && selectedOption_19.value === correctAnswer_19) {
+            score++;
+        } else {
+            wrongQuestions.push("19");
+        }
+
+        // 检查单选题 20
+        const selectedOption_20 = document.querySelector('input[name="q20"]:checked');
+        const correctAnswer_20 = correctAnswers["20"] || "";
+
+        if (selectedOption_20 && selectedOption_20.value === correctAnswer_20) {
+            score++;
+        } else {
+            wrongQuestions.push("20");
+        }
+
+        // 检查单选题 21
+        const selectedOption_21 = document.querySelector('input[name="q21"]:checked');
+        const correctAnswer_21 = correctAnswers["21"] || "";
+
+        if (selectedOption_21 && selectedOption_21.value === correctAnswer_21) {
+            score++;
+        } else {
+            wrongQuestions.push("21");
+        }
+
+        // 检查单选题 22
+        const selectedOption_22 = document.querySelector('input[name="q22"]:checked');
+        const correctAnswer_22 = correctAnswers["22"] || "";
+
+        if (selectedOption_22 && selectedOption_22.value === correctAnswer_22) {
+            score++;
+        } else {
+            wrongQuestions.push("22");
+        }
+
+        // 检查单选题 23
+        const selectedOption_23 = document.querySelector('input[name="q23"]:checked');
+        const correctAnswer_23 = correctAnswers["23"] || "";
+
+        if (selectedOption_23 && selectedOption_23.value === correctAnswer_23) {
+            score++;
+        } else {
+            wrongQuestions.push("23");
+        }
+
+        // 检查单选题 24
+        const selectedOption_24 = document.querySelector('input[name="q24"]:checked');
+        const correctAnswer_24 = correctAnswers["24"] || "";
+
+        if (selectedOption_24 && selectedOption_24.value === correctAnswer_24) {
+            score++;
+        } else {
+            wrongQuestions.push("24");
+        }
+
+        // 检查单选题 25
+        const selectedOption_25 = document.querySelector('input[name="q25"]:checked');
+        const correctAnswer_25 = correctAnswers["25"] || "";
+
+        if (selectedOption_25 && selectedOption_25.value === correctAnswer_25) {
+            score++;
+        } else {
+            wrongQuestions.push("25");
+        }
+
+        // 检查单选题 26
+        const selectedOption_26 = document.querySelector('input[name="q26"]:checked');
+        const correctAnswer_26 = correctAnswers["26"] || "";
+
+        if (selectedOption_26 && selectedOption_26.value === correctAnswer_26) {
+            score++;
+        } else {
+            wrongQuestions.push("26");
+        }
+
+        // 检查单选题 27
+        const selectedOption_27 = document.querySelector('input[name="q27"]:checked');
+        const correctAnswer_27 = correctAnswers["27"] || "";
+
+        if (selectedOption_27 && selectedOption_27.value === correctAnswer_27) {
+            score++;
+        } else {
+            wrongQuestions.push("27");
+        }
+
+        // 检查单选题 28
+        const selectedOption_28 = document.querySelector('input[name="q28"]:checked');
+        const correctAnswer_28 = correctAnswers["28"] || "";
+
+        if (selectedOption_28 && selectedOption_28.value === correctAnswer_28) {
+            score++;
+        } else {
+            wrongQuestions.push("28");
+        }
+
+        // 检查单选题 29
+        const selectedOption_29 = document.querySelector('input[name="q29"]:checked');
+        const correctAnswer_29 = correctAnswers["29"] || "";
+
+        if (selectedOption_29 && selectedOption_29.value === correctAnswer_29) {
+            score++;
+        } else {
+            wrongQuestions.push("29");
+        }
+
+        // 检查单选题 30
+        const selectedOption_30 = document.querySelector('input[name="q30"]:checked');
+        const correctAnswer_30 = correctAnswers["30"] || "";
+
+        if (selectedOption_30 && selectedOption_30.value === correctAnswer_30) {
+            score++;
+        } else {
+            wrongQuestions.push("30");
+        }
+
+        // 检查单选题 31
+        const selectedOption_31 = document.querySelector('input[name="q31"]:checked');
+        const correctAnswer_31 = correctAnswers["31"] || "";
+
+        if (selectedOption_31 && selectedOption_31.value === correctAnswer_31) {
+            score++;
+        } else {
+            wrongQuestions.push("31");
+        }
+
+        // 检查单选题 32
+        const selectedOption_32 = document.querySelector('input[name="q32"]:checked');
+        const correctAnswer_32 = correctAnswers["32"] || "";
+
+        if (selectedOption_32 && selectedOption_32.value === correctAnswer_32) {
+            score++;
+        } else {
+            wrongQuestions.push("32");
+        }
+
+        // 检查单选题 33
+        const selectedOption_33 = document.querySelector('input[name="q33"]:checked');
+        const correctAnswer_33 = correctAnswers["33"] || "";
+
+        if (selectedOption_33 && selectedOption_33.value === correctAnswer_33) {
+            score++;
+        } else {
+            wrongQuestions.push("33");
+        }
+
+        // 检查单选题 34
+        const selectedOption_34 = document.querySelector('input[name="q34"]:checked');
+        const correctAnswer_34 = correctAnswers["34"] || "";
+
+        if (selectedOption_34 && selectedOption_34.value === correctAnswer_34) {
+            score++;
+        } else {
+            wrongQuestions.push("34");
+        }
+
+        // 检查单选题 35
+        const selectedOption_35 = document.querySelector('input[name="q35"]:checked');
+        const correctAnswer_35 = correctAnswers["35"] || "";
+
+        if (selectedOption_35 && selectedOption_35.value === correctAnswer_35) {
+            score++;
+        } else {
+            wrongQuestions.push("35");
+        }
+
+        // 检查单选题 36
+        const selectedOption_36 = document.querySelector('input[name="q36"]:checked');
+        const correctAnswer_36 = correctAnswers["36"] || "";
+
+        if (selectedOption_36 && selectedOption_36.value === correctAnswer_36) {
+            score++;
+        } else {
+            wrongQuestions.push("36");
+        }
+
+        // 检查单选题 37
+        const selectedOption_37 = document.querySelector('input[name="q37"]:checked');
+        const correctAnswer_37 = correctAnswers["37"] || "";
+
+        if (selectedOption_37 && selectedOption_37.value === correctAnswer_37) {
+            score++;
+        } else {
+            wrongQuestions.push("37");
+        }
+
+        // 检查单选题 38
+        const selectedOption_38 = document.querySelector('input[name="q38"]:checked');
+        const correctAnswer_38 = correctAnswers["38"] || "";
+
+        if (selectedOption_38 && selectedOption_38.value === correctAnswer_38) {
+            score++;
+        } else {
+            wrongQuestions.push("38");
+        }
+
+        // 检查单选题 39
+        const selectedOption_39 = document.querySelector('input[name="q39"]:checked');
+        const correctAnswer_39 = correctAnswers["39"] || "";
+
+        if (selectedOption_39 && selectedOption_39.value === correctAnswer_39) {
+            score++;
+        } else {
+            wrongQuestions.push("39");
+        }
+
+        // 检查单选题 40
+        const selectedOption_40 = document.querySelector('input[name="q40"]:checked');
+        const correctAnswer_40 = correctAnswers["40"] || "";
+
+        if (selectedOption_40 && selectedOption_40.value === correctAnswer_40) {
+            score++;
+        } else {
+            wrongQuestions.push("40");
+        }
+
+        // 检查单选题 41
+        const selectedOption_41 = document.querySelector('input[name="q41"]:checked');
+        const correctAnswer_41 = correctAnswers["41"] || "";
+
+        if (selectedOption_41 && selectedOption_41.value === correctAnswer_41) {
+            score++;
+        } else {
+            wrongQuestions.push("41");
+        }
+
+        // 检查单选题 42
+        const selectedOption_42 = document.querySelector('input[name="q42"]:checked');
+        const correctAnswer_42 = correctAnswers["42"] || "";
+
+        if (selectedOption_42 && selectedOption_42.value === correctAnswer_42) {
+            score++;
+        } else {
+            wrongQuestions.push("42");
+        }
+
+        // 检查单选题 43
+        const selectedOption_43 = document.querySelector('input[name="q43"]:checked');
+        const correctAnswer_43 = correctAnswers["43"] || "";
+
+        if (selectedOption_43 && selectedOption_43.value === correctAnswer_43) {
+            score++;
+        } else {
+            wrongQuestions.push("43");
+        }
+
+
+                // 显示结果
+                const resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = `<h3>测验结果</h3>
+                    <p>您的得分: <span class="${score === 43 ? 'correct' : 'wrong'}">${score}/${43}</span></p>`;
+
+                if(wrongQuestions.length > 0) {
+                    resultDiv.innerHTML += `<p>错题序号: ${wrongQuestions.join(', ')}</p>`;
+
+                    // 标记错题并显示正确答案
+                    wrongQuestions.forEach(qId => {
+                        const qElement = document.getElementById('question_' + qId);
+                        if (qElement) {
+                            qElement.classList.add('wrong-question');
+
+                            // 显示正确答案反馈
+                            const correctAns = correctAnswers[qId];
+                            if (correctAns) {
+                                const feedback = document.createElement('div');
+                                feedback.className = 'answer-feedback correct-answer';
+                                feedback.textContent = '正确答案: ' + correctAns.split('').join(', ');
+                                qElement.appendChild(feedback);
+                            }
+                        }
+                    });
+                }
+
+                resultDiv.style.display = 'block';
+                window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+            }
+
+            function resetQuiz() {
+                // 重置表单
+                document.getElementById('quizForm').reset();
+
+                // 隐藏结果
+                document.getElementById('result').style.display = 'none';
+
+                // 清除所有题目标记和反馈
+                document.querySelectorAll('.question').forEach(q => {
+                    q.classList.remove('wrong-question');
+                });
+
+                document.querySelectorAll('.answer-feedback').forEach(el => el.remove());
+
+                // 滚动到顶部
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        </script>
+    </body>
+    </html>
