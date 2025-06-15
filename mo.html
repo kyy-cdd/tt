@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本默写练习</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .text-display {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            min-height: 100px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .input-area {
+            width: 100%;
+            min-height: 150px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 18px;
+            font-family: Consolas, 'Courier New', monospace;
+            resize: vertical;
+            background: #f9f9f9;
+            color: #222;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .missing-items {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border-radius: 4px;
+            color: #856404;
+            white-space: pre-line;
+        }
+        .missing-item {
+            padding: 5px 0;
+            border-bottom: 1px solid #ffeeba;
+        }
+        .missing-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文本默写练习</h1>
+        <div class="text-display" id="textDisplay">
+            import numpy as np <br>
+            import pandas as pd <br>
+            import matplotlib.pyplot as plt <br>
+            import re<br>
+            from sklearn.datasets import load_iris<br>
+            from sklearn.model_selection import train_test_split<br>
+            from sklearn.preprocessing import MinMaxScaler<br>
+            from sklearn.tree import DecisionTreeClassifier<br>
+            from sklearn.metrics import classification_report<br>
+            from sklearn.cluster import KMeans<br>
+            from sklearn.metrics import fowlkes_mallows_score<br>
+            from sklearn import neighbors<br>
+        </div>
+        <div class="button-container">
+            <button onclick="toggleText()">显示/隐藏文本</button>
+            <button onclick="checkText()">检查答案</button>
+        </div>
+        <textarea class="input-area" id="userInput" placeholder="请在此处输入您默写的文本..."></textarea>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        let isTextVisible = true;
+
+        function toggleText() {
+            const textDisplay = document.getElementById('textDisplay');
+            isTextVisible = !isTextVisible;
+            textDisplay.style.display = isTextVisible ? 'block' : 'none';
+        }
+
+        function checkText() {
+            const originalText = document.getElementById('textDisplay').innerText;
+            const userText = document.getElementById('userInput').value;
+            const resultDiv = document.getElementById('result');
+            
+            // 将文本分割成行并清理
+            const originalLines = originalText.split(/\n|<br\s*\/?/i)
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+            
+            const userLines = userText.split(/\n/)
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+            
+            // 找出完全缺失的行（不区分大小写，忽略多余空格）
+            const normalize = str => str.replace(/\s+/g, ' ').trim().toLowerCase();
+            const missingLines = originalLines.filter(originalLine => {
+                const normOriginal = normalize(originalLine);
+                return !userLines.some(userLine => normalize(userLine) === normOriginal);
+            });
+            
+            if (missingLines.length === 0) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML = '恭喜！您的默写完全正确！';
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.innerHTML = `
+                    <div>抱歉，您的默写有误，请继续努力！</div>
+                    <div class="missing-items">
+                        <strong>缺失的导入语句：</strong>
+                        ${missingLines.join('\n')}
+                    </div>
+                `;
+            }
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html> 
