@@ -2,7 +2,7 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <title>实操题</title>
+        <title>实操题pro</title>
         <style>
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -180,7 +180,7 @@
     </head>
     <body>
         <div class="header">
-            <h1>实操题</h1>
+            <h1>实操题pro</h1>
             <p>测试您的知识掌握程度</p>
         </div>
 
@@ -188,18 +188,19 @@
 
     <div class="question" id="question_1">
         <div class="question-number">第 1 题</div>
-        <div class="question-text">(简答题)因为 NumPy 数组在数值运算方面的效率优于 Python 提供的 list，所以灵活掌握 NumPy 数组的创建和基础的运算是有必要的。请使用 NumPy 库，编写 Python 代码完成下列操作：
+        <div class="question-text">(简答题)
 (1) 创建一个数值从 0 至 1，间隔为 0.01 的数组 arr1。
 (2) 创建一个包含 101 个服从正态分布的随机数的数组 arr2。（注意：数组 arr2 为一维数组）
 (3) 对数组 arr1 和数组 arr2 进行四则运算，并输出其结果。（四则运算包括加、减、乘、除运算）
 (4) 对数组 arr2 进行简单的统计分析，并输出其结果。（统计分析包括对数组进行升序排序、求和、求均值、求标准差和求最小值操作）。
 (5) 将数组 arr1 和数组 arr2 存储为当前工作路径下的一个二进制格式的文件 arr.npz。</div>
-        <div class="answer-section">
-            <textarea id="answer_1" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('1')" class="reference-btn">参考答案</button>
-                <div id="reference_1" class="reference-content">
-                    1.
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_1" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('1')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_1" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>1.
 (1) 创建一个数值从 0 至 1，间隔为 0.01 的数组 arr1。(3 分)  
 
 import numpy as np  
@@ -226,7 +227,7 @@ print('数组的最小值为：', np.min(arr2))
 
 (5) 将数组 arr1 和数组 arr2 存储为当前工作路径下的一个二进制格式的文件 arr.npz。(4 分)  
 
-np.savez('arr.npz', arr1, arr2)
+np.savez('arr.npz', arr1, arr2)</pre>
                 </div>
             </div>
         </div>
@@ -235,21 +236,21 @@ np.savez('arr.npz', arr1, arr2)
     <div class="question" id="question_2">
         <div class="question-number">第 2 题</div>
         <div class="question-text">(简答题)
-请编写Python代码，对鸢尾花数据完成下列操作：
-读取数据文件iris.csv，存储为数据框iris，并将数据框的列名称从左至右依次修改为“sepal_length”“sepal_width” “petal_length”“petal_width”“class”。（3分）
-将数据框iris中“petal_length”列的第0行至第9行设置为缺失值。（注意：在Python中，索引为0开始）（3分）
-将数据框iris中“petal_length”列的缺失值全部替换为1.0。（3分）
-删除数据框iris中“class”列。（2分）
-将数据框iris的前3行设置为缺失值。（2分）
-删除数据框iris中存在缺失值的行。（2分）
-重新设置数据框iris的行索引。（3分）
-将数据框iris保存到当前工作路径下并命名为iris_new.csv。（2分）</div>
-        <div class="answer-section">
-            <textarea id="answer_2" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('2')" class="reference-btn">参考答案</button>
-                <div id="reference_2" class="reference-content">
-                    2.
+(1) 读取数据文件iris.csv，存储为数据框iris，并将数据框的列名称从左至右依次修改为"sepal_length""sepal_width" "petal_length""petal_width""class"。
+(2) 将数据框iris中"petal_length"列的第0行至第9行设置为缺失值。（注意：在Python中，索引为0开始）
+(3) 将数据框iris中"petal_length"列的缺失值全部替换为1.0。
+(4) 删除数据框iris中"class"列。
+(5) 将数据框iris的前3行设置为缺失值。
+(6) 删除数据框iris中存在缺失值的行。
+(7) 重新设置数据框iris的行索引。
+(8) 将数据框iris保存到当前工作路径下并命名为iris_new.csv。</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_2" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('2')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_2" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>2.
 （1）读取数据文件iris.csv，存储为数据框iris，并将数据框的列名称从左至右依次修改为“sepal_length”“sepal__width”“petal_length”“petal_width”“class”。（3分）  
 
 import pandas as pd  
@@ -282,7 +283,7 @@ iris.reset_index(drop=True, inplace=True)
 
 （8）将数据框iris保存到当前工作路径下并命名为iris_new.csv。（2分）  
 
-iris.to_csv('iris_new.csv')
+iris.to_csv('iris_new.csv')</pre>
                 </div>
             </div>
         </div>
@@ -291,22 +292,21 @@ iris.to_csv('iris_new.csv')
     <div class="question" id="question_3">
         <div class="question-number">第 3 题</div>
         <div class="question-text">(简答题)
-葡萄酒是以葡萄为原料酿造的一种果酒。葡萄酒的品种很多，因葡萄的栽培、葡萄酒生产工艺条件的不同，产品风格各不相同。wine 数据集包含 3 种不同的葡萄酒的记录共 178 条。其中，每个特征对应葡萄酒的每种化学成分，并且都属于连续型数据。通过对 wine 数据集的数据进行聚类，实现葡萄酒的类别划分。
-请依据 wine 数据集，编写 Python 代码完成下列操作：
-（1）读取数据文件 wine.csv，并储存为数据框 wine。（1 分）
-（2）查询据框 wine 中是否存在缺失值。若存在缺失值，则需对其进行处理；反之，则无需处理。（2 分）
-（3）在 wine 数据集中，“Class” 列为葡萄酒的类别，分别为 1、2 和 3。绘制各类别的数量占比饼图。（4 分）
-（4）将数据框 wine 的数据和标签进行拆分，分别储存至数据框 wine_data 和数据框 wine_label。（3 分）
-（5）将数据划分为训练集和测试集，训练集和测试集样本数比例为 8:2，并将训练集数据、测试集数据、训练集标签和测试集标签分别储存至数据框 wine_train、数据框 wine_test、数据框 wine_train_label 和数据框 wine_test_label。（3 分）
-（6）构建聚类数目为 3 的 K - Means 模型，并命名为 kmeans。（4 分）
-（7）对比真实标签和聚类标签，求取 FMI（FMI 为聚类模型的评价指标），并输出其结果。（4 分）
-（8）当聚类数目为 2~10 类时，确定最优聚类数目。（4 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_3" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('3')" class="reference-btn">参考答案</button>
-                <div id="reference_3" class="reference-content">
-                    3.
+(1) 读取数据文件 wine.csv，并储存为数据框 wine。
+(2) 查询据框 wine 中是否存在缺失值。若存在缺失值，则需对其进行处理；反之，则无需处理。
+(3) 在 wine 数据集中，"Class" 列为葡萄酒的类别，分别为 1、2 和 3。绘制各类别的数量占比饼图。
+(4) 将数据框 wine 的数据和标签进行拆分，分别储存至数据框 wine_data 和数据框 wine_label。
+(5) 将数据划分为训练集和测试集，训练集和测试集样本数比例为 8:2，并将训练集数据、测试集数据、训练集标签和测试集标签分别储存至数据框 wine_train、数据框 wine_test、数据框 wine_train_label 和数据框 wine_test_label。
+(6) 构建聚类数目为 3 的 K - Means 模型，并命名为 kmeans。
+(7) 对比真实标签和聚类标签，求取 FMI（FMI 为聚类模型的评价指标），并输出其结果。
+(8) 当聚类数目为 2~10 类时，确定最优聚类数目。</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_3" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('3')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_3" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>3.
 (1) 读取数据文件 wine.csv，并储存为数据框 wine。（1 分）  
 
 import pandas as pd  
@@ -353,7 +353,7 @@ for i in range(2, 11):
     kmeans = KMeans(n_clusters=i, random_state=123).fit(wine_train)  
     score = fowlkes_mallows_score(wine_train_label, kmeans.labels_)  
     print('wine 数据集聚 %d 类 FMI 评价值为: %.4f' %(i, score))  
-由此可知，最优聚类数目为 2
+由此可知，最优聚类数目为 2</pre>
                 </div>
             </div>
         </div>
@@ -361,19 +361,20 @@ for i in range(2, 11):
 
     <div class="question" id="question_4">
         <div class="question-number">第 4 题</div>
-        <div class="question-text">(简答题)国际象棋棋盘是个正方形，由横纵向各 8 格、颜色一深一浅交错排列的 64 个小方格组成，深色格为黑格，浅色格为白格，棋子就在这些格子中移动。接下来创建一个与国际象棋棋盘相似的 8×8 矩阵。
-（1）启动 Jupyter Notebook 创建一个 Notebook。（2 分）
-（2）创建一个 8×8 的全 0 数组，并储存至数组 arr。（3 分）
-（3）将数组 arr 的奇数行奇数列和偶数行偶数列的元素设置为 1。（4 分）
-（4）将数组 arr 转换为矩阵 matr1。（2 分）
-（5）将矩阵 matr1 转置为矩阵 matr2，并判断矩阵 matr1 与矩阵 matr2 是否完全相同。（3 分）
-（6）将矩阵 matr2 存储为当前工作路径下的一个二进制格式的文件 matr2.npy。（2 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_4" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('4')" class="reference-btn">参考答案</button>
-                <div id="reference_4" class="reference-content">
-                    4.
+        <div class="question-text">(简答题)
+(1) 启动 Jupyter Notebook 创建一个 Notebook。
+(2) 创建一个 8×8 的全 0 数组，并储存至数组 arr。
+(3) 将数组 arr 的奇数行奇数列和偶数行偶数列的元素设置为 1。
+(4) 将数组 arr 转换为矩阵 matr1。
+(5) 将矩阵 matr1 转置为矩阵 matr2，并判断矩阵 matr1 与矩阵 matr2 是否完全相同。
+(6) 将矩阵 matr2 存储为当前工作路径下的一个二进制格式的文件 matr2.npy。</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_4" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('4')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_4" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>4.
 1) 启动 Jupyter Notebook 创建一个 Notebook。（2 分）  
 
 (2) 创建一个 8×8 的全 0 数组，并储存至数组 arr。（3 分）  
@@ -399,7 +400,7 @@ print((matr1 == matr2).all())
 
 (6) 将矩阵 matr2 存储为当前工作路径下的一个二进制格式的文件 matr2.npy。（2 分）  
 
-np.save('matr2.npy', matr2)
+np.save('matr2.npy', matr2)</pre>
                 </div>
             </div>
         </div>
@@ -408,20 +409,20 @@ np.save('matr2.npy', matr2)
     <div class="question" id="question_5">
         <div class="question-number">第 5 题</div>
         <div class="question-text">(简答题)
-招聘数据探索与分析。
-（1）读取数据文件 job_info.csv，并储存为数据框 job_info。（2 分）
-（2）将数据框 job_info 的列名称从左至右依次修改为 “公司”“岗位”“工作地点”“工资”“发布日期”。（2 分）
-（3）统计数据中需求最多的岗位招聘，并输出其结果。（2 分）
-（4）获取数据中 9 月 3 日发布的招聘信息，并输出其结果。（3 分）
-（5）获取工作地点在深圳的数据分析师招聘信息，并输出其结果。（3 分）
-（6）获取在 “工资” 列中，以 “千 / 月” 或 “千 / 年” 或 “万 / 月” 或 “万 / 年” 结尾的数据所在的行的数据，并储存至数据框 job_info_new。（3 分）
-（7）根据 “工资” 列，在数据框 job_info_new 中，新增最低工资和最高工资两列，列名分别设置为 “最低工资（元 / 月）” 和 “最高工资（元 / 月）”。（注意：这两列数据的单位是 “元 / 月”，例如：若 2 - 2.5 万 / 月，则最低工资为 20000，最高工资为 25000。）（5 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_5" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('5')" class="reference-btn">参考答案</button>
-                <div id="reference_5" class="reference-content">
-                    5.
+(1) 读取数据文件 job_info.csv，并储存为数据框 job_info。
+(2) 将数据框 job_info 的列名称从左至右依次修改为 "公司""岗位""工作地点""工资""发布日期"。
+(3) 统计数据中需求最多的岗位招聘，并输出其结果。
+(4) 获取数据中 9 月 3 日发布的招聘信息，并输出其结果。
+(5) 获取工作地点在深圳的数据分析师招聘信息，并输出其结果。
+(6) 获取在 "工资" 列中，以 "千 / 月" 或 "千 / 年" 或 "万 / 月" 或 "万 / 年" 结尾的数据所在的行的数据，并储存至数据框 job_info_new。
+(7) 根据 "工资" 列，在数据框 job_info_new 中，新增最低工资和最高工资两列，列名分别设置为 "最低工资（元 / 月）" 和 "最高工资（元 / 月）"。（注意：这两列数据的单位是 "元 / 月"，例如：若 2 - 2.5 万 / 月，则最低工资为 20000，最高工资为 25000。）</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_5" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('5')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_5" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>5.
 (1) 读取数据文件 job_info.csv，并储存为数据框 job_info。（2 分）  
 
 import pandas as pd  
@@ -470,7 +471,7 @@ def get_max_min_value(x):
     return a  
 salary = job_info_new['工资'].apply(get_max_min_value)  
 job_info_new['最低工资(元/月)'] = salary.apply(lambda x: x[0])  
-job_info_new['最高工资(元/月)'] = salary.apply(lambda x: x[1])
+job_info_new['最高工资(元/月)'] = salary.apply(lambda x: x[1])</pre>
                 </div>
             </div>
         </div>
@@ -479,21 +480,20 @@ job_info_new['最高工资(元/月)'] = salary.apply(lambda x: x[1])
     <div class="question" id="question_6">
         <div class="question-number">第 6 题</div>
         <div class="question-text">(简答题)
-sklearn 库不仅囊括了很多机器学习的算法，而且也自带了许多经典的数据集，鸢尾花数据集就是其中之一。鸢尾花数据集包含 150 个数据样本，分为 3 类，每类 50 个数据，每个数据包含 4 个特征，分别为 SepalLength（花萼长度）、SepalWidth（花萼宽度）、PetalLength（花瓣长度）、PetalWidth（花瓣宽度）。通过这 4 个特征可划分鸢尾花的类别。
-请根据鸢尾花数据，编写 Python 代码完成下列操作：
-（1）使用 sklearn 库加载鸢尾花数据和数据标签，将鸢尾花数据储存至数据框 data，数据标签储存至数据框 label。（3 分）
-（2）统计数据中鸢尾花的类别数，并输出其结果。 （3 分）
-（3）以花萼长度为 x 轴，花萼宽度为 y 轴，绘制并展示散点图。（3 分）
-（4）将加载好的鸢尾花数据集划分成训练集和测试集两部分，训练集和测试集样本数比例为 8:2，并将训练集数据、测试集数据、训练集标签和测试集标签分别储存至数据框 x_train，数据框 x_test，数据框 y_train 和数据框 y_test。（4 分）
-（5）对数据框 x_train 和数据框 x_test 进行离差标准化，将标准化后的训练集和测试集数据分别储存至数据框 scaler_x_train 和数据框 scaler_x_test。（注意：测试集数据需使用和训练集数据相同的规则进行标准化。）（4 分）
-（6）构建决策树分类模型，命名为 model，并进行模型训练。（4 分）
-（7）对构建的模型进行性能评估，并输出其结果。（性能评估包括计算精确率、召回率和 F1 值等分类评估指标。）（4 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_6" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('6')" class="reference-btn">参考答案</button>
-                <div id="reference_6" class="reference-content">
-                    6.
+(1) 使用 sklearn 库加载鸢尾花数据和数据标签，将鸢尾花数据储存至数据框 data，数据标签储存至数据框 label。
+(2) 统计数据中鸢尾花的类别数，并输出其结果。
+(3) 以花萼长度为 x 轴，花萼宽度为 y 轴，绘制并展示散点图。
+(4) 将加载好的鸢尾花数据集划分成训练集和测试集两部分，训练集和测试集样本数比例为 8:2，并将训练集数据、测试集数据、训练集标签和测试集标签分别储存至数据框 x_train，数据框 x_test，数据框 y_train 和数据框 y_test。
+(5) 对数据框 x_train 和数据框 x_test 进行离差标准化，将标准化后的训练集和测试集数据分别储存至数据框 scaler_x_train 和数据框 scaler_x_test。（注意：测试集数据需使用和训练集数据相同的规则进行标准化。）
+(6) 构建决策树分类模型，命名为 model，并进行模型训练。
+(7) 对构建的模型进行性能评估，并输出其结果。（性能评估包括计算精确率、召回率和 F1 值等分类评估指标。）</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_6" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('6')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_6" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>6.
 (1) 使用 sklearn 库加载鸢尾花数据和数据标签，将鸢尾花数据储存至数据框 data，数据标签储存至数据框 label。(3 分)  
 
 from sklearn.datasets import load_iris  
@@ -534,7 +534,7 @@ model.fit(scaler_x_train, y_train)
 from sklearn.metrics import classification_report # 模型评估  
 pre = model.predict(scaler_x_test)  
 res = classification_report(y_test, pre)  
-print(res)
+print(res)</pre>
                 </div>
             </div>
         </div>
@@ -543,18 +543,18 @@ print(res)
     <div class="question" id="question_7">
         <div class="question-number">第 7 题</div>
         <div class="question-text">(简答题)
-NumPy 是用于数据科学计算的库。请使用 NumPy 库，编写 Python 代码求解各坐标点之间的距离。
-启动 Jupyter Notebook 创建一个 Notebook。（2 分）
-随机生成 100 个二维坐标点，并储存至数组 arr1。（4 分）
-计算各样本点之间的欧氏距离，并储存至数组 arr2。（4 分）
-将数组 arr2 的形状转换为（100, 100）。（3 分）
-将数组 arr2 存储为当前工作路径下的一个二进制格式的文件 arr2.npy。（2 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_7" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('7')" class="reference-btn">参考答案</button>
-                <div id="reference_7" class="reference-content">
-                    7.
+(1) 启动 Jupyter Notebook 创建一个 Notebook。
+(2) 随机生成 100 个二维坐标点，并储存至数组 arr1。
+(3) 计算各样本点之间的欧氏距离，并储存至数组 arr2。
+(4) 将数组 arr2 的形状转换为（100, 100）。
+(5) 将数组 arr2 存储为当前工作路径下的一个二进制格式的文件 arr2.npy。</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_7" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('7')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_7" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>7.
 （1）启动 Jupyter Notebook 创建一个 Notebook。（2 分）  
 
 （2）随机生成 100 个二维坐标点，并储存至数组 arr1。（4 分）  
@@ -579,7 +579,7 @@ arr2 = arr2.reshape(100, 100)
 
 （5）将数组 arr2 存储为当前工作路径下的一个二进制格式的文件 arr2.npy。（2 分）  
 
-np.save('arr2.npy', arr2)
+np.save('arr2.npy', arr2)</pre>
                 </div>
             </div>
         </div>
@@ -588,30 +588,22 @@ np.save('arr2.npy', arr2)
     <div class="question" id="question_8">
         <div class="question-number">第 8 题</div>
         <div class="question-text">(简答题)
-用户用电量数据探索与分析。
-data 数据集为用户用电量数据，其中包含 3 个字段。具体特征说明如下：
-| 特征名称 | 特征说明 |
-| --- | --- |
-| CONS_NO | 表示用户编号为 1-200 的 200 位电力用户 |
-| DATA_DATE | 表示时间，如 2015/1/1 代表 2015 年 1 月 1 日 |
-| KWH | 表示用户用电量 |
-请根据用户用电量数据，编写 Python 代码完成下列操作：
-读取数据文件 data.csv，并储存为数据框 data。（2 分）
-将数据框 data 转换为行索引为用户编号、列索引为时间、值为用户用电量的数据透视表 data_new。（2 分）
-采用四分位法对透视表 data_new 中的异常数据进行识别并处理。（4 分）
-构造特征 1：统计每个用户用电数据的基本统计量（基本统计量包括最大值、最小值、均值、中位数），并将结果储存至数据feature1。（2 分）
-构造特征 2：将每个用户用电数据按日差分后，求取基本统计量（基本统计量包括最大值、最小值、均
-值、中位数），将结果储存至数据框 feature2。（2 分）
-构造特征 3：求每个用户的 5%分位数，并将结果储存至数据框 feature3。（2 分）
-构造特征 4：统计每个用户的日用电量在其最大值 0.9 倍以上的次数，并将结果储存至数据框feature4。（2 分）
-合并特征 1、特征 2、特征 3 和特征 4，并储存至数据框 feature。（2 分）
-将数据框 feature 保存到当前工作路径下并命名为 feature.csv。（2 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_8" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('8')" class="reference-btn">参考答案</button>
-                <div id="reference_8" class="reference-content">
-                    8.
+(1) 读取数据文件 data.csv，并储存为数据框 data。
+(2) 将数据框 data 转换为行索引为用户编号、列索引为时间、值为用户每日用电量的数据透视表 data_new。
+(3) 采用四分位法对透视表 data_new 中的异常数据进行识别并处理。
+(4) 构造特征 1：统计每个用户用电数据的基本统计量（基本统计量包括最大值、最小值、均值、中位数），并将结果储存至数据feature1。
+(5) 构造特征 2：将每个用户用电数据按日差分后，求取基本统计量（基本统计量包括最大值、最小值、均值、中位数），将结果储存至数据框 feature2。
+(6) 构造特征 3：求每个用户的 5%分位数，并将结果储存至数据框 feature3。
+(7) 构造特征 4：统计每个用户的日用电量在其最大值 0.9 倍以上的次数，并将结果储存至数据框feature4。
+(8) 合并特征 1、特征 2、特征 3 和特征 4，并储存至数据框 feature。
+(9) 将数据框 feature 保存到当前工作路径下并命名为 feature.csv。</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_8" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('8')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_8" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>8.
 （1）读取数据文件 data.csv，并储存为数据框 data。（2 分）  
 
 import pandas as pd  
@@ -653,7 +645,7 @@ feature = pd.concat([feature1, feature2, feature3, feature4], axis=0)
 
 （9）将数据框 feature 保存到当前工作路径下并命名为 feature.csv。（2 分）  
 
-feature.to_csv('feature.csv')
+feature.to_csv('feature.csv')</pre>
                 </div>
             </div>
         </div>
@@ -662,33 +654,23 @@ feature.to_csv('feature.csv')
     <div class="question" id="question_9">
         <div class="question-number">第 9 题</div>
         <div class="question-text">(简答题)
-泰坦尼克号是英国白星航运公司下辖的一艘奥林匹克级 HYPERLINK "https://baike.baidu.com/item/%E6%B8%B8%E8%BD%AE/629860" \t "_blank" 游轮，1909 年在哈兰德与沃尔夫造船厂动工建造，1911 年下水，1912 年完工试航。泰坦尼克号是当时世界上体积最庞大、内部设施最豪华的客运轮船，有“永不沉没”的美誉。然而不幸的是，在它的处女航中，泰坦尼克号便遭厄运。1912 年 4 月 14 日，泰坦尼克号与一座冰山相撞，造成右舷船艏至船中部破裂，五间水密舱进水。4 月 15 日，泰坦尼克船体断裂成两截后沉入大西洋底3700 米处。2224 名船员及乘客中，1517 人丧生。经过探究发现，似乎有些人比其他人更有生存的可能。接下来通过其生存与遇难的人的数据，预测乘客生还人数。
-数据文件为 titanic.csv，具体特征说明如下：
-特征名称 | 特征说明
-PassengerId | 乘客编号
-Survived | 是否生还。1 为生还，0 为未生还
-Pclass | 船舱号
-Sex | 性别
-fare | 船票价格
-SibSp | 兄妹个数
-Parch | 父母子女个数
-请根据数据，编写 Python 代码完成下列要求：
-（1）读取数据文件 titanic.csv，并储存为数据框 titanic。（1 分）
-（2）计算乘客生还人数，并输出其结果。（2 分）
-（3）绘制男女乘客比例饼图，并添加标题“男女乘客比例饼图”。（3 分）
-（4）绘制船票价格直方图，并添加 x 轴标题“船票价格”和 y 轴标题“频次”。（注意：需先对“船票价格”进行升序排序。）（3 分）
-（5）在数据框 titanic 中，新增一列为家庭人数，并将列名设置为“familysize”。（2 分）
-（6）修改数据框 titanic 的“Sex”列，使用数值“1”和“0”分别代替“Sex”列中的“male”和“female”。（2 分）
-（7）根据“Pclass”、“Sex”和“familysize”这三个特征预测乘客是否生还。将数据集划分成训练集和测试集两部分，训练集和测试集样本数例为 8:2。（4 分）
-（8）构建 KNN 模型，命名为 clf，并进行模型训练。（4 分）
-（9）使用测试集数据进行模型预测，并将结果储存至数组 pre。（2 分）
-（10）对构建的模型进行性能评估，并输出其结果。（性能评估包括计算精确率、召回率和 F1 值等分类评估指标。）（2 分）</div>
-        <div class="answer-section">
-            <textarea id="answer_9" rows="6" placeholder="在此输入您的答案..." class="answer-textarea"></textarea>
-            <div class="reference-answer">
-                <button type="button" onclick="toggleReferenceAnswer('9')" class="reference-btn">参考答案</button>
-                <div id="reference_9" class="reference-content">
-                    9.
+(1) 读取数据文件 titanic.csv，并储存为数据框 titanic。
+(2) 计算乘客生还人数，并输出其结果。
+(3) 绘制男女乘客比例饼图，并添加标题"男女乘客比例饼图"。
+(4) 绘制船票价格直方图，并添加 x 轴标题"船票价格"和 y 轴标题"频次"。（注意：需先对"船票价格"进行升序排序。）
+(5) 在数据框 titanic 中，新增一列为家庭人数，并将列名设置为"familysize"。
+(6) 修改数据框 titanic 的"Sex"列，使用数值"1"和"0"分别代替"Sex"列中的"male"和"female"。
+(7) 根据"Pclass"、"Sex"和"familysize"这三个特征预测乘客是否生还。将数据集划分成训练集和测试集两部分，训练集和测试集样本数例为 8:2。
+(8) 构建 KNN 模型，命名为 clf，并进行模型训练。
+(9) 使用测试集数据进行模型预测，并将结果储存至数组 pre。
+(10) 对构建的模型进行性能评估，并输出其结果。（性能评估包括计算精确率、召回率和 F1 值等分类评估指标。）</div>
+        <div class="answer-section" style="flex-direction: column; align-items: stretch;">
+            <textarea id="answer_9" rows="6" placeholder="在此输入您的答案..." class="answer-textarea" style="width: 100%; box-sizing: border-box;"></textarea>
+            <div class="reference-answer" style="margin-top: 10px; width: 100%;">
+                <button type="button" onclick="toggleReferenceAnswer('9')" class="reference-btn" style="width: 150px; margin-bottom: 5px;">参考答案</button>
+                <div id="reference_9" class="reference-content" style="width: 100%;">
+                    <h4>参考答案：</h4>
+                    <pre>9.
 （1）读取数据文件 titanic.csv，并储存为数据框 titanic。（1 分）  
 
 import numpy as np  
@@ -747,7 +729,7 @@ pre = clf.predict(x_test) # 模型预测
 （10）对构建的模型进行性能评估，并输出其结果。（性能评估包括计算精确率、召回率和 F1 值等分类评估指标。）（2 分）  
 
 from sklearn.metrics import classification_report  
-res = classification_report(y_test, pre) # 模型评估
+res = classification_report(y_test, pre) # 模型评估</pre>
                 </div>
             </div>
         </div>
