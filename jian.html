@@ -188,7 +188,7 @@
 
     <div class="question" id="question_1">
         <div class="question-number">第 1 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)因为 NumPy 数组在数值运算方面的效率优于 Python 提供的 list，所以灵活掌握 NumPy 数组的创建和基础的运算是有必要的。请使用 NumPy 库，编写 Python 代码完成下列操作：
 (1) 创建一个数值从 0 至 1，间隔为 0.01 的数组 arr1。
 (2) 创建一个包含 101 个服从正态分布的随机数的数组 arr2。（注意：数组 arr2 为一维数组）
 (3) 对数组 arr1 和数组 arr2 进行四则运算，并输出其结果。（四则运算包括加、减、乘、除运算）
@@ -291,7 +291,8 @@ iris.to_csv('iris_new.csv')</pre>
 
     <div class="question" id="question_3">
         <div class="question-number">第 3 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">葡萄酒是以葡萄为原料酿造的一种果酒。葡萄酒的品种很多，因葡萄的栽培、葡萄酒生产工艺条件的不同，产品风格各不相同。wine 数据集包含 3 种不同的葡萄酒的记录共 178 条。其中，每个特征对应葡萄酒的每种化学成分，并且都属于连续型数据。通过对 wine 数据集的数据进行聚类，实现葡萄酒的类别划分。
+请依据 wine 数据集，编写 Python 代码完成下列操作：
 (1) 读取数据文件 wine.csv，并储存为数据框 wine。
 (2) 查询据框 wine 中是否存在缺失值。若存在缺失值，则需对其进行处理；反之，则无需处理。
 (3) 在 wine 数据集中，"Class" 列为葡萄酒的类别，分别为 1、2 和 3。绘制各类别的数量占比饼图。
@@ -361,7 +362,7 @@ for i in range(2, 11):
 
     <div class="question" id="question_4">
         <div class="question-number">第 4 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)国际象棋棋盘是个正方形，由横纵向各 8 格、颜色一深一浅交错排列的 64 个小方格组成，深色格为黑格，浅色格为白格，棋子就在这些格子中移动。接下来创建一个与国际象棋棋盘相似的 8×8 矩阵。
 (1) 启动 Jupyter Notebook 创建一个 Notebook。
 (2) 创建一个 8×8 的全 0 数组，并储存至数组 arr。
 (3) 将数组 arr 的奇数行奇数列和偶数行偶数列的元素设置为 1。
@@ -408,7 +409,7 @@ np.save('matr2.npy', matr2)</pre>
 
     <div class="question" id="question_5">
         <div class="question-number">第 5 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)招聘数据探索与分析。
 (1) 读取数据文件 job_info.csv，并储存为数据框 job_info。
 (2) 将数据框 job_info 的列名称从左至右依次修改为 "公司""岗位""工作地点""工资""发布日期"。
 (3) 统计数据中需求最多的岗位招聘，并输出其结果。
@@ -479,7 +480,7 @@ job_info_new['最高工资(元/月)'] = salary.apply(lambda x: x[1])</pre>
 
     <div class="question" id="question_6">
         <div class="question-number">第 6 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)sklearn 库不仅囊括了很多机器学习的算法，而且也自带了许多经典的数据集，鸢尾花数据集就是其中之一。鸢尾花数据集包含 150 个数据样本，分为 3 类，每类 50 个数据，每个数据包含 4 个特征，分别为 SepalLength（花萼长度）、SepalWidth（花萼宽度）、PetalLength（花瓣长度）、PetalWidth（花瓣宽度）。通过这 4 个特征可划分鸢尾花的类别。请根据鸢尾花数据，编写 Python 代码完成下列操作：
 (1) 使用 sklearn 库加载鸢尾花数据和数据标签，将鸢尾花数据储存至数据框 data，数据标签储存至数据框 label。
 (2) 统计数据中鸢尾花的类别数，并输出其结果。
 (3) 以花萼长度为 x 轴，花萼宽度为 y 轴，绘制并展示散点图。
@@ -543,7 +544,6 @@ print(res)</pre>
     <div class="question" id="question_7">
         <div class="question-number">第 7 题</div>
         <div class="question-text">(简答题)
-(1) 启动 Jupyter Notebook 创建一个 Notebook。
 (2) 随机生成 100 个二维坐标点，并储存至数组 arr1。
 (3) 计算各样本点之间的欧氏距离，并储存至数组 arr2。
 (4) 将数组 arr2 的形状转换为（100, 100）。
@@ -587,7 +587,8 @@ np.save('arr2.npy', arr2)</pre>
 
     <div class="question" id="question_8">
         <div class="question-number">第 8 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)用户用电量数据探索与分析。data 数据集为用户用电量数据，其中包含 3 个字段。具体特征说明如下：特征名称	特征说明 CONS_NO	表示用户编号为 1-200 的 200 位电力用户 DATA_DATE	表示时间，如 2015/1/1 代表 2015 年 1 月 1 日 KWH	表示用户用电量请根据用户用电量数据，编写 Python 代码完成下列操作：
+(1) 启动 Jupyter Notebook 创建一个 Notebook。
 (1) 读取数据文件 data.csv，并储存为数据框 data。
 (2) 将数据框 data 转换为行索引为用户编号、列索引为时间、值为用户每日用电量的数据透视表 data_new。
 (3) 采用四分位法对透视表 data_new 中的异常数据进行识别并处理。
@@ -653,7 +654,7 @@ feature.to_csv('feature.csv')</pre>
 
     <div class="question" id="question_9">
         <div class="question-number">第 9 题</div>
-        <div class="question-text">(简答题)
+        <div class="question-text">(简答题)泰坦尼克号是英国白星航运公司下辖的一艘奥林匹克级 HYPERLINK "https://baike.baidu.com/item/%E6%B8%B8%E8%BD%AE/629860" \t "_blank" 游轮，1909 年在哈兰德与沃尔夫造船厂动工建造，1911 年下水，1912 年完工试航。泰坦尼克号是当时世界上体积最庞大、内部设施最豪华的客运轮船，有“永不沉没”的美誉。然而不幸的是，在它的处女航中，泰坦尼克号便遭厄运。1912 年 4 月 14 日，泰坦尼克号与一座冰山相撞，造成右舷船艏至船中部破裂，五间水密舱进水。4 月 15 日，泰坦尼克船体断裂成两截后沉入大西洋底3700 米处。2224 名船员及乘客中，1517 人丧生。经过探究发现，似乎有些人比其他人更有生存的可能。接下来通过其生存与遇难的人的数据，预测乘客生还人数。数据文件为 titanic.csv，具体特征说明如下：特征名称 | 特征说明 PassengerId | 乘客编号 Survived | 是否生还。1 为生还，0 为未生还 Pclass | 船舱号 Sex | 性别 fare | 船票价格 SibSp | 兄妹个数 Parch | 父母子女个数
 (1) 读取数据文件 titanic.csv，并储存为数据框 titanic。
 (2) 计算乘客生还人数，并输出其结果。
 (3) 绘制男女乘客比例饼图，并添加标题"男女乘客比例饼图"。
